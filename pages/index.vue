@@ -1,5 +1,19 @@
 <template>
   <main class="container">
+    <svg width="132px" height="1012px" viewBox="0 0 132 1012">
+      <path
+        d="M60.0495117,1 C93.5911783,137.734375 87.6927408,220.346354 38.3541992,248.835938 C-0.809171986,271.450066 -16.9687858,227.257813 23.6823242,227.257812 C64.3334342,227.257812 83.1354492,266.859375 47.3776367,324.632812 C11.6198242,382.40625 -5.19267585,446.585938 78.3620117,467.546875 C161.916699,488.507812 130.658887,418.890625 78.3620117,442.429688 C26.0651367,465.96875 29.0651367,601.929688 65.3620117,671.742188 C101.658887,741.554688 182.268262,913.351562 56.1026386,967.34375 C-0.64161078,991.627276 -0.669238346,924.46875 48.3541992,946.632812 C81.0364908,961.408854 90.71097,982.778646 77.3776367,1010.74219"
+        class="path"
+      />
+    </svg>
+    <img
+      class="circle"
+      id="coin"
+      ref="coin"
+      src="@/assets/images/coin/coin15.png"
+      @click="flipCoin"
+    />
+
     <section class="slide sticky" id="slide1">
       <div class="grid-1 center scroll-skew">
         <div class="col-1 col scroll-translate" data-offset="0.3">
@@ -9,25 +23,13 @@
         </div>
         <div class="col-2 col">
           <div class="center-block">
-            <div>
-              <!-- <img class="icon-img" src="@/assets/images/center-icon.png" /> -->
-            </div>
+            <div></div>
             <div class="slogan">
-              <!-- <div>消費回饋最高100%</div>
-              <div>享受超值&nbsp;吃喝玩樂體驗</div>-->
-              <div>GGGGGGGGG</div>
-              <div>GGGGGGGGGGGGGGG</div>
+              <div>消費回饋最高100%</div>
+              <div>享受超值&nbsp;吃喝玩樂體驗</div>
             </div>
             <div style="display: flex; position: relative; justify-content: center;">
               <img class="mobile-img" src="@/assets/images/mobile.png" />
-              <!-- <img class="coin" src="@/assets/images/coin.png" /> -->
-              <img
-                id="coin"
-                ref="coin"
-                class
-                src="@/assets/images/coin/coin15.png"
-                @click="flipCoin"
-              />
             </div>
           </div>
         </div>
@@ -74,7 +76,7 @@ export default {
   mounted() {
     if (process.client) {
       this.imgTranslate();
-      this.scrollRotation();
+      // this.scrollRotation();
     }
   },
   data() {
@@ -84,6 +86,7 @@ export default {
     };
   },
   methods: {
+    //錯誤效果
     imgTranslate() {
       window.addEventListener("scroll", e => {
         let rate = window.pageYOffset,
@@ -103,45 +106,42 @@ export default {
         });
       });
     },
-    scrollRotation() {
-      // const logo = document.getElementsByClassName("coin")[0];
+    // scrollRotation() {
+    //   // const logo = document.getElementsByClassName("coin")[0];
 
-      window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+    //   window.addEventListener("scroll", () => {
+    //     const scrollTop =
+    //       window.pageYOffset || document.documentElement.scrollTop;
 
-        const contentHeight =
-          Math.max(
-            document.body.scrollHeight,
-            document.body.offsetHeight,
-            document.documentElement.clientHeight,
-            document.documentElement.scrollHeight,
-            document.documentElement.offsetHeight
-          ) - window.innerHeight;
+    //     const contentHeight =
+    //       Math.max(
+    //         document.body.scrollHeight,
+    //         document.body.offsetHeight,
+    //         document.documentElement.clientHeight,
+    //         document.documentElement.scrollHeight,
+    //         document.documentElement.offsetHeight
+    //       ) - window.innerHeight;
 
-        const rounds = Math.floor(contentHeight / window.innerHeight);
-        const progress = Math.floor((scrollTop / contentHeight) * 360) * rounds;
+    //     const rounds = Math.floor(contentHeight / window.innerHeight);
+    //     const progress = Math.floor((scrollTop / contentHeight) * 360) * rounds;
 
-        // logo.style.transform = `rotate(${progress}deg)`;
-      });
-    },
+    //     // logo.style.transform = `rotate(${progress}deg)`;
+    //   });
+    // },
     nextFrame(target, frame, speed) {
-      console.log(
-        "this.dilutedFrames.includes(frame):" +
-          this.dilutedFrames.includes(frame)
-      );
+      // console.log(
+      //   "this.dilutedFrames.includes(frame):" +
+      //     this.dilutedFrames.includes(frame)
+      // );
       let coin = this.$refs.coin;
       if (speed < 20 + target && this.dilutedFrames.includes(frame)) {
         this.nextFrame(target, frame + 1, speed);
-        console.log("a");
       } else if (speed > 60 + target && this.finalFrames.includes(frame)) {
-        coin.src = `/images/coin/coin${frame}.png`;
+        coin.src = `/images/coin/${frame}.png`;
         coin.classList.remove("spinning");
         coin.classList.add("finished");
-        console.log("b");
       } else {
-        coin.src = `/images/coin/coin${frame}.png`;
-        console.log("c");
+        coin.src = `/images/coin/${frame}.png`;
         setTimeout(
           () => this.nextFrame(target, frame < 20 ? frame + 1 : 1, ++speed),
           speed
@@ -150,15 +150,14 @@ export default {
     },
 
     flipCoin() {
-      // let coin = this.$refs.coin;
-      // const target = Math.floor(Math.random() * 50);
-      // console.log(target);
-      // coin.classList.add("spinning");
-      // this.nextFrame(target, 0, 0);
+      let coin = this.$refs.coin;
+      const target = Math.floor(Math.random() * 50);
+      coin.classList.add("spinning");
+      this.nextFrame(target, 0, 0);
     },
+    // scroll時 去切換硬幣照片
     handleScroll() {
       var coin = this.$refs.coin;
-      // coin.classList.add("spinning");
       let newImageUrl = "";
       var scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
@@ -166,41 +165,7 @@ export default {
 
       let img = ((scrollTop / 30) % 19) + 1;
       newImageUrl = `/images/coin/${Math.round(img)}.png`;
-      console.log("img:" + Math.round(img));
-
-      if (scrollTop < 260 && scrollTop > 0) {
-        coin.className = "";
-        coin.classList.add("active0");
-      } else if (scrollTop >= 260 && scrollTop < 600) {
-        coin.className = "";
-        coin.classList.add("active1");
-      } else if (scrollTop >= 600) {
-        coin.className = "";
-        coin.classList.add("active2");
-      }
-
-      coin.classList.remove("fuck");
-      // if (scrollTop <= 100) {
-      //   newImageUrl = `/images/coin/coin${16}.png`;
-      // } else if (scrollTop > 100) {
-      //   newImageUrl = `/images/coin/coin${15}.png`;
-      // } else if (scrollTop > 200) {
-      //   newImageUrl = `/images/coin/coin${6}.png`;
-      // } else if (scrollTop > 300) {
-      //   newImageUrl = `/images/coin/coin${20}.png`;
-      // }
-
-      let timer = null;
-      clearTimeout(timer);
-      // set a timer for 100 ms
-      timer = setTimeout(() => {
-        var coin = this.$refs.coin;
-        // coin.classList.remove("spinning");
-        // coin.classList.add("fuck");
-        if (typeof scrolling === "function") {
-          stopped.apply(this, arguments);
-        }
-      }, 100);
+      coin.classList.add("spinning");
 
       coin.src = newImageUrl;
     }
@@ -224,6 +189,41 @@ export default {
   created() {
     if (process.client) {
       window.addEventListener("scroll", this.handleScroll);
+
+      const path = document.querySelector(".path");
+      const circle = document.querySelector(".circle");
+
+      let pathPosition = path.getBoundingClientRect();
+      let documentPosition = document.body.getBoundingClientRect();
+      const pathTotalLength = path.getTotalLength();
+
+      function positionElements() {
+        // SVG passes center of screen
+        const relativePageOffset =
+          -pathPosition.top + (window.pageYOffset + window.innerHeight * 0.5);
+
+        const pointPercentage = relativePageOffset / pathPosition.height;
+        const pointOnPath = pointPercentage * pathTotalLength;
+        const pathPoint = path.getPointAtLength(pointOnPath);
+
+        circle.style.transform = `translate(
+			${pathPosition.left + pathPoint.x}px,
+			${pathPosition.top + pathPoint.y}px
+		)`;
+      }
+
+      window.addEventListener("scroll", () => {
+        positionElements();
+      });
+
+      window.addEventListener("resize", () => {
+        pathPosition = path.getBoundingClientRect();
+        documentPosition = document.body.getBoundingClientRect();
+
+        positionElements();
+      });
+
+      positionElements();
     }
   }
 };
@@ -411,32 +411,6 @@ h1 {
       -webkit-transform: rotateZ(-90deg);
       transform: rotateZ(-90deg);
     }
-
-    .fuck {
-      -webkit-animation: fuck 5s infinite linear;
-      animation: fuck 5s infinite linear;
-    }
-  }
-
-  @-webkit-keyframes fuck {
-    from {
-      -webkit-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-    }
-    to {
-      -webkit-transform: rotateX(-360deg);
-      transform: rotateX(-360deg);
-    }
-  }
-  @keyframes fuck {
-    from {
-      -webkit-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-    }
-    to {
-      -webkit-transform: rotateX(-360deg);
-      transform: rotateX(-360deg);
-    }
   }
 }
 
@@ -512,118 +486,37 @@ h1 {
   }
 }
 @keyframes flip {
-  0% {
-    -webkit-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
-  100% {
+  to {
     -webkit-transform: rotateZ(-360deg);
     transform: rotateZ(-360deg);
   }
 }
 
-img.active0 {
-  right: 40%;
-  bottom: 30%;
-  -webkit-animation: coin1 2s ease, updown 2s infinite alternate;
-  animation: coin0 2s ease, updown 2s infinite alternate,
-    flip 2s infinite linear;
+svg {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50vh;
+  margin-bottom: 50vh;
+  overflow: visible;
+  transform: translateX(-50%);
 }
 
-img.active1 {
-  right: 51%;
-  bottom: 25%;
-  -webkit-animation: coin1 2s ease, updown 2s infinite alternate;
-  animation: coin1 2s ease, updown 2s infinite alternate,
-    flip 2s infinite linear;
-}
-img.active2 {
-  right: 46%;
-  bottom: 35%;
-  -webkit-animation: coin2 2s ease, updown 2s infinite alternate;
-  animation: coin2 2s ease, updown 2s infinite alternate,
-    flip 5s infinite linear;
+path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
 }
 
-img.active3 {
-  left: 28%;
-  top: 58%;
-  -webkit-animation: coin3 2s ease, updown 2s infinite alternate;
-  animation: coin3 2s ease, updown 2s infinite alternate;
-}
-
-@keyframes coin0 {
-  0% {
-    right: 51%;
-    bottom: 25%;
-  }
-
-  100% {
-    right: 40%;
-    bottom: 30%;
-  }
-}
-@keyframes coin1 {
-  0% {
-    right: 40%;
-    bottom: 30%;
-  }
-  100% {
-    right: 51%;
-    bottom: 25%;
-  }
-}
-@keyframes coin2 {
-  0% {
-    right: 51%;
-    bottom: 25%;
-  }
-  100% {
-    right: 46%;
-    bottom: 35%;
-  }
-}
-
-@keyframes coin0-reverse {
-  0% {
-    right: 51%;
-    bottom: 25%;
-  }
-
-  100% {
-    right: 40%;
-    bottom: 30%;
-  }
-}
-@keyframes coin1-reverse {
-  0% {
-    right: 40%;
-    bottom: 30%;
-  }
-  100% {
-    right: 51%;
-    bottom: 25%;
-  }
-}
-@keyframes coin2-reverse {
-  0% {
-    right: 51%;
-    bottom: 25%;
-  }
-  100% {
-    right: 46%;
-    bottom: 35%;
-  }
-}
-
-@keyframes updown {
-  0% {
-    transform: none;
-  }
-  100% {
-    -webkit-transform: translate3d(0, 20px, 0);
-    transform: translate3d(0, 20px, 0);
-  }
+.circle {
+  position: absolute;
+  width: rem(150px);
+  // height: 5rem;
+  z-index: 999;
 }
 
 /* package帶來的 */
