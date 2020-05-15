@@ -1,0 +1,20 @@
+{
+  "name": "front-maobc",
+  "version": "1.0.0",
+  "description": "My terrific Nuxt.js project",
+  "author": "blake",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --hostname 192.168.66.16 --port 3333",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
+  }
+}
