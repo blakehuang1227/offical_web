@@ -238,6 +238,12 @@ $base-font-size: 16px !default;
   @return ($target / $context) + 0rem;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -278,7 +284,6 @@ h1 {
 
 #slide1 {
   z-index: 1;
-
   padding: 0 30px;
   background-image: url("~assets/images/home_01.png");
   -o-background-size: 100% auto;
@@ -379,6 +384,7 @@ h1 {
     }
     .mobile-img {
       max-width: 40%;
+      height: auto;
     }
     .coin {
       width: 5%;
@@ -411,6 +417,12 @@ h1 {
       -webkit-transform: rotateZ(-90deg);
       transform: rotateZ(-90deg);
     }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 750px) {
+  #slide1 {
+    background-size: 100% auto;
   }
 }
 
