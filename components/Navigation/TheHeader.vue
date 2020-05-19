@@ -5,18 +5,33 @@
   <header class="the-header">
     <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
     <div class="logo">
-      <nuxt-link to="/">maobc</nuxt-link>
+      <nuxt-link to="/">
+        <img class="head-logo" src="@/assets/images/header_icon.png" />
+      </nuxt-link>
     </div>
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
         <li class="nav-item">
-          <nuxt-link to="/store">Store</nuxt-link>
+          <nuxt-link to="/store">最新消息</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/about">About</nuxt-link>
+          <nuxt-link to="/store">店家中心</nuxt-link>
         </li>
-        <!-- <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li> -->
+        <li class="nav-item">
+          <nuxt-link to="/store">加入我們</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/store">下載</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/about">企業服務</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/admin">
+            <input type="button" class="btn-login" value="登入" />
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </header>
@@ -34,7 +49,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 /* .header-container {
   height: 60px;
 } */
@@ -52,6 +67,30 @@ export default {
   box-sizing: border-box;
   padding: 0 20px;
   color: black;
+}
+
+.head-logo {
+  width: 176px;
+}
+
+.btn-login {
+  color: #fff;
+  background-color: #f8b62d;
+  width: 76px;
+  height: 34px;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: auto;
+
+  a {
+    margin: auto;
+    display: inline-block;
+    height: 100%;
+  }
 }
 
 a:visited {
@@ -103,7 +142,7 @@ a:active {
 }
 
 .nav-item {
-  margin: 0 10px;
+  margin: auto 10px;
 }
 
 .nav-item a {
