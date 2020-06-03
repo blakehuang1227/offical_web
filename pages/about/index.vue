@@ -64,21 +64,21 @@
           <div class="carousel-wrap">
             <client-only>
               <slick ref="slick" :options="slickOptions" style="width:100%">
-                <a href="http://placehold.it/2000x1000">
+                <div href="http://placehold.it/2000x1000">
                   <img src="images/about/sample-img.png" alt />
-                </a>
-                <a href="http://placehold.it/2000x1000">
+                </div>
+                <div href="http://placehold.it/2000x1000">
                   <img src="images/about/sample-img.png" alt />
-                </a>
-                <a href="http://placehold.it/2000x1000">
+                </div>
+                <div href="http://placehold.it/2000x1000">
                   <img src="images/about/sample-img.png" alt />
-                </a>
-                <a href="http://placehold.it/2000x1000">
+                </div>
+                <div href="http://placehold.it/2000x1000">
                   <img src="images/about/sample-img.png" alt />
-                </a>
-                <a href="http://placehold.it/2000x1000">
+                </div>
+                <div href="http://placehold.it/2000x1000">
                   <img src="images/about/sample-img.png" alt />
-                </a>
+                </div>
               </slick>
             </client-only>
           </div>
@@ -105,9 +105,9 @@ export default {
     if (process.client) {
       var slick = require("vue-slick");
     }
-    this.$nextTick(function() {
-      this.slickComp = "Slick";
-    });
+    // this.$nextTick(function() {
+    // this.slickComp = slick;
+    // });
   },
   middleware: "routerAuth",
   meta: {
@@ -121,8 +121,8 @@ export default {
       slickOptions: {
         slidesToShow: 3,
         arrows: true,
-        mobileFirst: false,
-        infinite: false,
+        mobileFirst: true,
+        infinite: true,
         variableWidth: true,
         // centerMode: true,
         responsive: [
@@ -180,14 +180,6 @@ $base-font-size: 16px !default;
     @return 0;
   }
   @return ($target / $context) + 0rem;
-}
-.carousel-wrap {
-  max-width: 900px;
-  img {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #c5c5c5;
-  }
 }
 
 .text1 {
@@ -340,13 +332,23 @@ section {
       flex-direction: row-reverse;
     }
 
-    .carousel-wrap {
+    .text1 {
+      max-width: 900px;
       width: 100%;
-      height: 350px;
+      margin: 0 auto;
+    }
 
+    .carousel-wrap {
+      max-width: 900px;
+      width: 90%;
+      height: 350px;
+      margin: 0 auto;
+      div {
+        width: 10%;
+      }
       img {
-        width: 300px;
-        height: 300px;
+        max-width: 300px;
+        // height: 300px;
         border: 1px solid #c5c5c5;
       }
     }

@@ -69,8 +69,28 @@
       <div class="section3-wrap block">
         <div style="height:13%;"></div>
         <div style="font-size:33px;height:13%;">合作店家 30種以上 種類最多</div>
-        <div style="height:13%;">
-          <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+        <!-- <div style="height:13%;"> -->
+        <div class="carousel-wrap">
+          <client-only>
+            <slick ref="slick" :options="slickOptions" style="width:100%">
+              <div>
+                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+              </div>
+              <div>
+                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+              </div>
+              <div>
+                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+              </div>
+              <div>
+                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+              </div>
+              <div>
+                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+              </div>
+            </slick>
+          </client-only>
+          <!-- </div> -->
         </div>
         <div class="stores-wrap" style="height:50%; width:100%">
           <div v-for="store in stores" :key="store.id" style="width:25%">
@@ -101,8 +121,13 @@
 </template>
 
 <script>
+import "~/node_modules/slick-carousel/slick/slick.css";
+import "~/node_modules/slick-carousel/slick/slick-theme.css";
 // import "aos/dist/aos.css";
 export default {
+  components: {
+    Slick: () => import("vue-slick")
+  },
   beforeRouteLeave(to, from, next) {
     if (this.skrollr && this.skrollr.init()) {
       console.log("destory skrollr");
@@ -121,7 +146,36 @@ export default {
         coinAnimate: false
       },
       skrollr: null,
-      stores: []
+      stores: [],
+      slickComp: "",
+      slide: 0,
+      sliding: null,
+      slickOptions: {
+        slidesToShow: 5,
+        arrows: true,
+        mobileFirst: true,
+        infinite: true,
+        variableWidth: true,
+        // centerMode: true,
+        responsive: [
+          {
+            breakpoint: 760,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      }
     };
   },
   head() {
@@ -145,6 +199,8 @@ export default {
         this.skrollr.init().destroy();
       }
       this.skrollr.init();
+
+      var slick = require("vue-slick");
     }
 
     window.addEventListener("scroll", () => {
@@ -181,6 +237,12 @@ export default {
       for (let i = 1; i <= 12; i++) {
         this.stores.push({ name: "店家" + i, imgSrc: "", id: i });
       }
+    },
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
     }
   }
 };
@@ -489,6 +551,21 @@ body {
         width: 100px;
         height: 100px;
       }
+    }
+  }
+
+  .carousel-wrap {
+    max-width: 920px;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    div {
+      width: 10%;
+      margin: 0 10px;
+    }
+    img {
+      max-width: 300px;
+      // height: 300px;
     }
   }
 }
