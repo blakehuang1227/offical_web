@@ -2,10 +2,10 @@
   <!-- <div class="header-container">
    
   </div>-->
-  <div>
+  <div :key="$route.path">
     <header class="the-header">
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
-      <div class="logo">
+      <div class="logo" @click="navActive='0'">
         <nuxt-link to="/">
           <img class="head-logo" src="@/assets/images/header_icon.png" />
         </nuxt-link>
@@ -13,26 +13,30 @@
       <div class="spacer"></div>
       <div class="navigation-items">
         <ul class="nav-list">
-          <li class="nav-item">
+          <li class="nav-item" :class="{'nav-active':navActive === '1'}" @click="navActive='1'">
             <nuxt-link to="/about">關於我們</nuxt-link>
           </li>
-          <li class="nav-item">
-            <nuxt-link to="/store">最新消息</nuxt-link>
+          <li class="nav-item" :class="{'nav-active':navActive === '2'}" @click="navActive='2'">
+            <nuxt-link to="/news">最新消息</nuxt-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" :class="{'nav-active':navActive === '3'}" @click="navActive='3'">
             <nuxt-link to="/store">店家中心</nuxt-link>
           </li>
-          <li class="nav-item">
-            <nuxt-link to="/store">加入我們</nuxt-link>
+          <li class="nav-item" :class="{'nav-active':navActive === '4'}" @click="navActive='4'">
+            <nuxt-link to="/join-us">加入我們</nuxt-link>
           </li>
           <!-- <li class="nav-item">
             <nuxt-link to="/store">下載</nuxt-link>
           </li>-->
-          <li class="nav-item" @click="showExtend">
-            <nuxt-link to="/store">下載</nuxt-link>
+          <li
+            class="nav-item"
+            :class="{'nav-active':navActive === '5'}"
+            @click="showExtend(); navActive='5'"
+          >
+            <nuxt-link to="/download">下載</nuxt-link>
           </li>
-          <li class="nav-item">
-            <nuxt-link to="/about">企業服務</nuxt-link>
+          <li class="nav-item" :class="{'nav-active':navActive === '6'}" @click="navActive='6'">
+            <nuxt-link to="/service">企業服務</nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/admin">
@@ -64,7 +68,8 @@ export default {
   },
   data() {
     return {
-      extendMenu: false
+      extendMenu: false,
+      navActive: "0"
     };
   },
   methods: {
@@ -73,6 +78,35 @@ export default {
     },
     collapeMenu() {
       this.extendMenu = false;
+    }
+  },
+  mounted() {
+    console.error(this.$route.path);
+
+    switch (this.$route.path) {
+      case "/home":
+        this.navActive = "0";
+        break;
+      case "/home":
+        this.navActive = "1";
+        break;
+      case "/about":
+        this.navActive = "2";
+        break;
+      case "/news":
+        this.navActive = "3";
+        break;
+      case "/join-us":
+        this.navActive = "4";
+        break;
+      case "/download":
+        this.navActive = "5";
+        break;
+      case "/service":
+        this.navActive = "6";
+        break;
+      default:
+      // code block
     }
   }
 };
@@ -153,13 +187,16 @@ export default {
 
 .nav-item {
   display: inline-block;
-  margin: auto;
-
+  margin: 0 10px;
   a {
     margin: auto;
     display: inline-block;
-    height: 100%;
+    // height: 100%;
   }
+}
+
+.nav-active {
+  border-bottom: 3px solid #ffb219;
 }
 
 a:visited {
@@ -200,6 +237,7 @@ a:active {
 @media (min-width: 768px) {
   .navigation-items {
     display: block;
+    height: 100%;
   }
 }
 
@@ -208,10 +246,13 @@ a:active {
   padding: 0;
   margin: 0;
   display: flex;
+  height: 100%;
 }
 
 .nav-item {
-  margin: auto 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-item a {
