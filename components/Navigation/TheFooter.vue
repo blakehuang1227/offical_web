@@ -1,92 +1,34 @@
 <template>
   <div class="footer">
-    <div class="inner-footer">
-      <!--  for company name and description -->
-      <div class="footer-items">
-        <!-- <h1>Company Name</h1> -->
-        <!-- <p>Description of any product or motto of the company.</p> -->
-      </div>
-
-      <!--  for quick links  -->
-      <div class="footer-items">
-        <!-- <h3>Quick Links</h3> -->
-        <div class="border1"></div>
-        <!--for the underline -->
-        <ul>
-          <a href="#">
-            <!-- <li>Home</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>Search</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>Contact</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>About</li> -->
-          </a>
-        </ul>
-      </div>
-
-      <!--  for some other links -->
-      <div class="footer-items">
-        <!-- <h3>Recipes</h3> -->
-        <div class="border1"></div>
-        <!--for the underline -->
-        <ul>
-          <a href="#">
-            <!-- <li>Indian</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>Chinese</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>Mexican</li> -->
-          </a>
-          <a href="#">
-            <!-- <li>Italian</li> -->
-          </a>
-        </ul>
-      </div>
-
-      <!--  for contact us info -->
-      <div class="footer-items">
-        <!-- <h3>Contact us</h3> -->
-        <div class="border1"></div>
-        <ul>
-          <li>
-            <!-- <i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc -->
-          </li>
-          <li>
-            <!-- <i class="fa fa-phone" aria-hidden="true"></i>123456789 -->
-          </li>
-          <li>
-            <!-- <i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com -->
-          </li>
-        </ul>
-
-        <!--   for social links -->
-        <div class="social-media">
-          <a href="#">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-google-plus-square"></i>
-          </a>
+    <div class="width-wrap">
+      <div class="block block1">
+        <div>白吃貓股份有限公司</div>
+        <div>244 新北市林口區文化三路二段357號</div>
+        <div>客服中心： (1000 - 2100 週一到週六)</div>
+        <div>02-2602-6777</div>
+        <div>service@maobc.com.tw</div>
+        <div class="icon-wrap">
+          <div>
+            <img src="images/footer/facebook.png" />
+          </div>
+          <div>
+            <img src="images/footer/instagram.png" />
+          </div>
+          <div>
+            <img src="images/footer/youtube.png" />
+          </div>
         </div>
       </div>
+      <div class="block block2">
+        <div>關於我們｜加入我們｜媒體專區｜聯絡我們</div>
+        <div>常見問題｜使用手冊</div>
+        <div>隱私權政策｜會員契約書｜代理收付服務條款</div>
+      </div>
+      <div class="block block3">
+        <div></div>
+      </div>
     </div>
-
-    <!--   Footer Bottom start  -->
-    <!-- <div class="footer-bottom">Copyright &copy; Food and Burps 2020.</div> -->
   </div>
-
-  <!--   Footer Bottom end -->
-
-  <!--   FOOTER END -->
 </template>
 
 <script>
@@ -96,11 +38,52 @@ export default {
 </script>
 
 
-<style scoped>
+
+<style scoped lang="scss">
+.icon-wrap {
+  display: flex;
+  justify-content: flex-start;
+
+  img {
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+.block {
+  line-height: 24px;
+  font-size: 14px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.block1 {
+  div:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.block2 {
+  font-size: 14px;
+}
+.width-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
 /* FOOTER */
 .footer {
   width: 100%;
-  background: #00121b;
+  height: 288px;
+  background: #fff;
   display: block;
 }
 

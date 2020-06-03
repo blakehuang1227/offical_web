@@ -27,7 +27,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['./plugins/main'],
+  plugins: ['./plugins/main', './plugins/vue-scrollto', './plugins/VueGtm.js', { src: '~/plugins/vue-slick.js', ssr: false }],
+  // plugins: [{ src: '~/plugins/vue-scrollto', mode: 'client' }],
+
   /*
   ** Nuxt.js dev-modules
   */
@@ -37,15 +39,25 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['vue-scrollto/nuxt', { duration: 700 }],
   ],
   /*
   ** Build configuration
   */
   build: {
+    vendor: ['vue-scrollto'],
+    extend(config, { isServer }) {
+      if (isServer) {
+        config.externals = [
+          require('webpack-node-externals')({
+            whitelist: [/^vue-slick/]
+          })
+        ]
+      }
+    },
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    }
+
   }
 }

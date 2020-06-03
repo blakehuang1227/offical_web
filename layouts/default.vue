@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import Vue from "vue";
 import TheHeader from "@/components/Navigation/TheHeader";
 import TheSidenav from "@/components/Navigation/TheSidenav";
 import TheFooter from "@/components/Navigation/TheFooter";
@@ -57,6 +58,7 @@ html {
 
 * {
   font-family: "Noto Sans TC", "roboto";
+  font-style: normal;
 }
 body {
   /* display: block; */
