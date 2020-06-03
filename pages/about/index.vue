@@ -119,7 +119,7 @@ export default {
       slide: 0,
       sliding: null,
       slickOptions: {
-        // slidesToShow: 10,
+        slidesToShow: 3,
         arrows: true,
         mobileFirst: false,
         infinite: false,
@@ -127,7 +127,7 @@ export default {
         // centerMode: true,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 760,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -182,6 +182,7 @@ $base-font-size: 16px !default;
   @return ($target / $context) + 0rem;
 }
 .carousel-wrap {
+  max-width: 900px;
   img {
     width: 300px;
     height: 300px;
