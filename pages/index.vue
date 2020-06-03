@@ -103,6 +103,13 @@
 <script>
 // import "aos/dist/aos.css";
 export default {
+  beforeRouteLeave(to, from, next) {
+    if (this.skrollr && this.skrollr.init()) {
+      console.log("destory skrollr");
+      this.skrollr.init().destroy();
+    }
+    next();
+  },
   middleware: "routerAuth",
   meta: {
     requiresAuth: false
@@ -113,6 +120,7 @@ export default {
         coin: true,
         coinAnimate: false
       },
+      skrollr: null,
       stores: []
     };
   },
@@ -121,22 +129,22 @@ export default {
   },
   created() {
     if (process.client) {
-      var aos = require("aos");
-      aos.init({
-        duration: 1200
-      });
+      // var aos = require("aos");
+      // aos.init({
+      //   duration: 1200
+      // });
 
       this.initData();
     }
   },
   mounted() {
     if (process.client) {
-      var skrollr = require("skrollr");
-      if (skrollr.init()) {
-        console.log("destory skcrollr");
-        skrollr.init().destroy();
+      this.skrollr = require("skrollr");
+      if (this.skrollr.init()) {
+        console.log("destory skrollr");
+        this.skrollr.init().destroy();
       }
-      skrollr.init();
+      this.skrollr.init();
     }
 
     window.addEventListener("scroll", () => {
