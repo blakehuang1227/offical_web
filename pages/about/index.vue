@@ -196,7 +196,7 @@ $base-font-size: 16px !default;
 }
 .section[data-v-38de483b] {
   height: 200vh;
-  width: 100vw;
+  width: 100%;
   display: block;
 }
 
@@ -211,7 +211,7 @@ $base-font-size: 16px !default;
 
 section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: block;
   > div {
     height: 100%;
@@ -385,6 +385,47 @@ section {
 
 .links {
   padding-top: 15px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 560px) {
+  section {
+    div.block {
+      div.item-wrap {
+        flex-direction: column !important;
+        align-items: center;
+
+        div {
+          height: 50%;
+          width: 80%;
+          overflow: hidden;
+
+          .text1 {
+            line-height: 24px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  section.section1 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    height: 500px;
+
+    div.block {
+      div.item-wrap {
+        flex-direction: column-reverse !important;
+      }
+    }
+  }
+
+  .section1 .block .item-wrap {
+    .right-image {
+      // display: none;
+    }
+  }
 }
 </style>
 

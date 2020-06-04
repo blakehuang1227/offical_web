@@ -13,16 +13,32 @@
       <div class="spacer"></div>
       <div class="navigation-items">
         <ul class="nav-list">
-          <li class="nav-item" :class="{'nav-active':navActive === '1'}" @click="navActive='1'">
+          <li
+            class="nav-item"
+            :class="{'nav-active':navActive === '1'}"
+            @click="navActive='1'; toLink('/about')"
+          >
             <nuxt-link to="/about">關於我們</nuxt-link>
           </li>
-          <li class="nav-item" :class="{'nav-active':navActive === '2'}" @click="navActive='2'">
+          <li
+            class="nav-item"
+            :class="{'nav-active':navActive === '2'}"
+            @click="navActive='2'; toLink('/news')"
+          >
             <nuxt-link to="/news">最新消息</nuxt-link>
           </li>
-          <li class="nav-item" :class="{'nav-active':navActive === '3'}" @click="navActive='3'">
+          <li
+            class="nav-item"
+            :class="{'nav-active':navActive === '3'}"
+            @click="navActive='3'; toLink('/store')"
+          >
             <nuxt-link to="/store">店家中心</nuxt-link>
           </li>
-          <li class="nav-item" :class="{'nav-active':navActive === '4'}" @click="navActive='4'">
+          <li
+            class="nav-item"
+            :class="{'nav-active':navActive === '4'}"
+            @click="navActive='4'; toLink('/join-us')"
+          >
             <nuxt-link to="/join-us">加入我們</nuxt-link>
           </li>
           <!-- <li class="nav-item">
@@ -78,6 +94,9 @@ export default {
     },
     collapeMenu() {
       this.extendMenu = false;
+    },
+    toLink(path) {
+      this.$router.push(path);
     }
   },
   mounted() {
@@ -186,6 +205,7 @@ export default {
 }
 
 .nav-item {
+  cursor: pointer;
   display: inline-block;
   margin: 0 10px;
   a {

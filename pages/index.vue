@@ -10,59 +10,63 @@
           <img src="/images/home/section1-5.png" style="margin-top:44px" />
           <img src="/images/home/section1-6.png" />
         </div>
-        <div class="flex-div">
-          <div style="width:50%" class="coinAnimate">
-            <div class="big-text">消費回饋最高 100%</div>
-            <div class="big-text">享受超值的吃喝玩樂體驗</div>
-            <div class="min-text">輕鬆消費、搖出回饋！</div>
+        <div class="width-wrap">
+          <div class="flex-div">
+            <div style="width:50%" class="coinAnimate">
+              <div class="big-text">消費回饋最高 100%</div>
+              <div class="big-text">享受超值的吃喝玩樂體驗</div>
+              <div class="min-text">輕鬆消費、搖出回饋！</div>
+            </div>
+            <div style="width:50%"></div>
           </div>
-          <div style="width:50%"></div>
         </div>
       </div>
     </section>
 
     <section id="anchor" class="section2">
       <!-- <div class="block"> -->
-      <div class="flex-div block">
-        <div style="width:40%">
-          <div class="big-text">消費回饋最高 100%</div>
-          <div class="big-text">享受超值的吃喝玩樂體驗</div>
-          <div class="min-text">輕鬆消費、搖出回饋！</div>
-        </div>
-        <div style="width:60%">
-          <div
-            class="box"
-            data-anchor-target="#anchor"
-            data-bottom-top="position: fixed; transform: translate(-50%,-60%); "
-            data-top-top="position: absolute; transform: translate(-50%,-100%);  "
-          >
-            <img class="mobile-img" src="@/assets/images/mobile.png" />
+      <div class="width-wrap">
+        <div class="flex-div block">
+          <div style="width:40%; text-align:left">
+            <div class="big-text">消費回饋最高 100%</div>
+            <div class="big-text">享受超值的吃喝玩樂體驗</div>
+            <div class="min-text">輕鬆消費、搖出回饋！</div>
           </div>
-          <div class="coin-box">
-            <div :class="coinStyles" id="coin1">
-              <img style="width:160px" src="/images/home/coin-b.png" />
+          <div style="width:60%">
+            <div
+              class="box"
+              data-anchor-target="#anchor"
+              data-bottom-top="position: fixed; transform: translate(-50%,-60%); "
+              data-top-top="position: absolute; transform: translate(-50%,-100%);  "
+            >
+              <img class="mobile-img" src="@/assets/images/mobile.png" />
             </div>
-            <div :class="coinStyles" id="coin2">
-              <img style="width:80px" src="/images/home/coin-m.png" />
-            </div>
-            <div :class="coinStyles" id="coin3">
-              <img style="width:80px" src="/images/home/coin-s.png" />
-            </div>
-            <div :class="coinStyles" id="coin4">
-              <img style="width:40px" src="/images/home/coin-s.png" />
-            </div>
-            <div :class="coinStyles" id="coin5">
-              <img style="width:40px" src="/images/home/coin-s.png" />
-            </div>
-            <div :class="coinStyles" id="coin6">
-              <img style="width:140px" src="/images/home/coin-b.png" />
-            </div>
-            <div :class="coinStyles" id="coin7">
-              <img style="width:140px" src="/images/home/coin-b.png" />
+            <div class="coin-box">
+              <div :class="coinStyles" id="coin1">
+                <img style="width:160px" src="/images/home/coin-b.png" />
+              </div>
+              <div :class="coinStyles" id="coin2">
+                <img style="width:80px" src="/images/home/coin-m.png" />
+              </div>
+              <div :class="coinStyles" id="coin3">
+                <img style="width:80px" src="/images/home/coin-s.png" />
+              </div>
+              <div :class="coinStyles" id="coin4">
+                <img style="width:40px" src="/images/home/coin-s.png" />
+              </div>
+              <div :class="coinStyles" id="coin5">
+                <img style="width:40px" src="/images/home/coin-s.png" />
+              </div>
+              <div :class="coinStyles" id="coin6">
+                <img style="width:140px" src="/images/home/coin-b.png" />
+              </div>
+              <div :class="coinStyles" id="coin7">
+                <img style="width:140px" src="/images/home/coin-b.png" />
+              </div>
             </div>
           </div>
+          <!-- </div> -->
         </div>
-        <!-- </div> -->
       </div>
     </section>
     <section class="section3">
@@ -74,19 +78,34 @@
           <client-only>
             <slick ref="slick" :options="slickOptions" style="width:100%">
               <div>
-                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+                <img
+                  style="max-height:100px;max-width:100px"
+                  src="/images/home/categories-icon-sample.png"
+                />
               </div>
               <div>
-                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+                <img
+                  style="max-height:100px;max-width:100px"
+                  src="/images/home/categories-icon-sample.png"
+                />
               </div>
               <div>
-                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+                <img
+                  style="max-height:100px;max-width:100px"
+                  src="/images/home/categories-icon-sample.png"
+                />
               </div>
               <div>
-                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+                <img
+                  style="max-height:100px;max-width:100px"
+                  src="/images/home/categories-icon-sample.png"
+                />
               </div>
               <div>
-                <img style="height:100px;width:100px" src="/images/home/categories-icon-sample.png" />
+                <img
+                  style="max-height:100px;max-width:100px"
+                  src="/images/home/categories-icon-sample.png"
+                />
               </div>
             </slick>
           </client-only>
@@ -159,21 +178,23 @@ export default {
         // centerMode: true,
         responsive: [
           {
-            breakpoint: 760,
+            breakpoint: 600,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false
+              slidesToShow: 2,
+              slidesToScroll: 2
             }
           },
           {
-            breakpoint: 800,
+            breakpoint: 320,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              arrows: true
             }
           }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
         ]
       }
     };
@@ -255,6 +276,16 @@ $base-font-size: 16px !default;
     @return 0;
   }
   @return ($target / $context) + 0rem;
+}
+
+.width-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 .coin-box {
@@ -526,11 +557,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  .width-wrap {
+    width: 100%;
+  }
 }
 
 .section3 {
+  padding: 0 50px;
   background: url("/images/home/section3-bg.png");
-
+  .block {
+  }
   .section3-wrap {
     max-width: 600px;
     display: flex;
@@ -561,10 +597,11 @@ body {
     margin: 0 auto;
     div {
       width: 10%;
-      margin: 0 10px;
+      // padding: 0 15px;
     }
     img {
       max-width: 300px;
+      padding: 10px;
       // height: 300px;
     }
   }
@@ -576,6 +613,7 @@ body {
   align-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   > div img {
     width: 70%;
     margin: 0 auto;
@@ -608,6 +646,7 @@ body {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -677,5 +716,28 @@ section,
 section p,
 .box p {
   opacity: 0.7;
+}
+
+@media screen and (min-width: 100px) and (max-width: 560px) {
+  // .section .block div.item-wrap {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
+  // .section .block .item-wrap > div {
+  //   width: 80%;
+  // }
+
+  // section.section1 .block1 .item-wrap {
+  //   flex-direction: column-reverse;
+
+  //   .right-image {
+  //     display: none;
+  //   }
+  // }
+
+  // .section2 .block3 .round-row {
+  //   width: 90%;
+  // }
 }
 </style>

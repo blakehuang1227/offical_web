@@ -29,8 +29,8 @@ $base-font-size: 16px !default;
 }
 
 .container {
-  width: 100vw;
-  min-height: 100vh;
+  //   width: 100vw;
+  //   min-height: 100vh;
   background: #eaeaeacc;
 }
 

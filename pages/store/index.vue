@@ -224,7 +224,7 @@ $base-font-size: 16px !default;
   @if $target == 0 {
     @return 0;
   }
-  @return ($target / $context) + 0rem;
+  @return ($target / $context) - 0rem;
 }
 
 * {
@@ -272,7 +272,7 @@ $base-font-size: 16px !default;
 
 .section {
   height: 200vh;
-  width: 100vw;
+  // width: 100vw;
   display: block;
   > div {
     height: 100%;
@@ -344,6 +344,7 @@ $base-font-size: 16px !default;
   .right-bg {
     width: 60%;
     top: -60px;
+    right: 0;
     position: absolute;
     z-index: -1;
   }
@@ -369,6 +370,7 @@ $base-font-size: 16px !default;
     width: 50%;
     position: absolute;
     z-index: -1;
+    top: calc(100% - 80%);
   }
   .right-bg {
     // left: 0;
@@ -466,6 +468,7 @@ $base-font-size: 16px !default;
       > div:nth-child(1) {
         width: 55%;
         height: 50%;
+        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -623,7 +626,7 @@ $base-font-size: 16px !default;
   }
 }
 
-@media screen and (min-width: 100px) and (max-width: 500px) {
+@media screen and (min-width: 100px) and (max-width: 560px) {
   .section .block div.item-wrap {
     flex-direction: column;
     align-items: center;
@@ -646,9 +649,24 @@ $base-font-size: 16px !default;
   }
 }
 
+@media screen and (min-width: 100px) and (max-width: 560px) {
+  .section3 {
+    .block1 {
+      .item-wrap {
+        div.right-image {
+          display: none;
+        }
+        div.left-text {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  // min-height: 100vh;
   // display: flex;
   justify-content: center;
   align-items: center;
@@ -675,5 +693,15 @@ $base-font-size: 16px !default;
 
 .links {
   padding-top: 15px;
+}
+
+$device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
+@each $current-device in $device-list {
+  @media screen and (min-width: $current-device) {
+    body,
+    html {
+      font-size: $current-device * 0;
+    }
+  }
 }
 </style>

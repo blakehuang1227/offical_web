@@ -78,6 +78,7 @@ export default {
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
+  padding: 0 3%;
 }
 /* FOOTER */
 .footer {
