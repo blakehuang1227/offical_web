@@ -2,13 +2,15 @@
   <main id="#skrollr-body">
     <section class="section1">
       <div class="block">
-        <div class="section1-imgs-wrap">
-          <img src="/images/home/section1-1.png" />
-          <img src="/images/home/section1-2.png" style="margin-top:44px" />
-          <img src="/images/home/section1-3.png" style="margin-top:24px" />
-          <img src="/images/home/section1-4.png" />
-          <img src="/images/home/section1-5.png" style="margin-top:44px" />
-          <img src="/images/home/section1-6.png" />
+        <div class="width-wrap">
+          <div class="section1-imgs-wrap">
+            <img src="/images/home/section1-1.png" />
+            <img src="/images/home/section1-2.png" style="margin-top:44px" />
+            <img src="/images/home/section1-3.png" style="margin-top:24px" />
+            <img src="/images/home/section1-4.png" />
+            <img src="/images/home/section1-5.png" style="margin-top:44px" />
+            <img src="/images/home/section1-6.png" />
+          </div>
         </div>
         <div class="width-wrap">
           <div class="flex-div">
@@ -144,6 +146,8 @@ import "~/node_modules/slick-carousel/slick/slick.css";
 import "~/node_modules/slick-carousel/slick/slick-theme.css";
 // import "aos/dist/aos.css";
 export default {
+  layout: "default",
+
   components: {
     Slick: () => import("vue-slick")
   },

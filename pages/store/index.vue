@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <section class="section section1">
       <div>
         <div class="block1 block">
@@ -15,14 +15,14 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
               <div class="text3">
                 <div class="link-wrap">
-                  <div class="link">品牌行銷</div>
-                  <div class="link">共享流量</div>
-                  <div class="link">M—POS點餐</div>
+                  <div class="link" v-scroll-to="'#anchor1'">品牌行銷</div>
+                  <div class="link" v-scroll-to="'#anchor2'">共享流量</div>
+                  <div class="link" v-scroll-to="'#anchor3'">M—POS點餐</div>
                 </div>
                 <div class="link-wrap">
-                  <div class="link">營銷管理</div>
-                  <div class="link">專業顧問服務</div>
-                  <div class="link">免費諮詢</div>
+                  <div class="link" v-scroll-to="'#anchor4'">營銷管理</div>
+                  <div class="link" v-scroll-to="'#anchor5'">專業顧問服務</div>
+                  <div class="link" v-scroll-to="'#anchor6'">免費諮詢</div>
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="block2 block">
+        <div class="block2 block" id="anchor1">
           <img class="left-bg" src="/images/store/block2-bg.png" />
           <img class="right-bg" src="/images/store/block2-bg2.png" />
           <img class="right-bg2" src="/images/store/block2-bg3.png" />
@@ -47,7 +47,7 @@
             </div>
           </div>
         </div>
-        <div class="block3 block">
+        <div class="block3 block" id="anchor2">
           <img class="left-bg" src="/images/store/block3-bg1.png" />
           <div class="item-wrap">
             <div class="left-text">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </section>
-    <section class="section section2">
+    <section class="section section2" id="anchor3">
       <div>
         <div class="block1 block">
           <div class="item-wrap">
@@ -76,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="block2 block">
+        <div class="block2 block" id="ancho4r">
           <div class="item-wrap">
             <div class="left-text">
               <div class="yellow-title">完善的點餐系統</div>
@@ -91,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div class="block3 block">
+        <div class="block3 block" id="anchor5">
           <div class="text1">
             從此開始
             <br />讓天下沒有難開的店
@@ -147,33 +147,7 @@
         </div>
       </div>
     </section>
-    <section class="section section3">
-      <div class="block block1">
-        <div class="item-wrap">
-          <div class="left-text">
-            <div class>
-              專業顧問服務
-              <br />協助完成開店夢想
-            </div>
-            <div class="border-text">收費與服務說明</div>
-          </div>
-          <div class="right-image">
-            <!-- <img src="images/store/phone.png" /> -->
-          </div>
-        </div>
-      </div>
-      <div class="block block2">
-        <div class="wrap">
-          <div>
-            <div class="text1">免費諮詢</div>
-            <div class="text2">立即申請成為貓Pay合作店家，了解更多詳情。</div>
-            <div>
-              <input type="buttom" value="我想了解更多" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <service id="anchor6"></service>
     <!-- <h1 class="title">Store</h1>
       <h2 class="subtitle"></h2>
       <div class="links">
@@ -185,12 +159,15 @@
 </template>
 
 <script>
+import service from "~/components/service";
 export default {
   middleware: "routerAuth",
   meta: {
     requiresAuth: false
   },
-  components: {},
+  components: {
+    service
+  },
   head() {
     return {
       title: "店家資訊",
@@ -442,6 +419,7 @@ $base-font-size: 16px !default;
         display: flex;
         white-space: nowrap;
         padding: 0% 4%;
+        cursor: pointer;
       }
     }
   }
@@ -528,6 +506,7 @@ $base-font-size: 16px !default;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    text-align: center;
 
     .title1 {
       font-size: rem(44px);

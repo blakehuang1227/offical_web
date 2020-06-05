@@ -30,7 +30,7 @@
           <li
             class="nav-item"
             :class="{'nav-active':navActive === '3'}"
-            @click="navActive='3'; toLink('/store')"
+            @click="showExtend();navActive='3';"
           >
             <nuxt-link to="/store">店家中心</nuxt-link>
           </li>
@@ -66,6 +66,23 @@
       <div class="folder" v-if="extendMenu">
         <img class="right-bg" src="/images/nav/right-bg.png" />
         <img class="left-bg" src="/images/nav/left-bg.png" />
+        <div class="flex-wrap">
+          <div class="m-pos-link" @click=" toLink('/store')">
+            <img src="/images/nav/store.png" />
+            <div class="text1">店老闆享有服務</div>
+            <div class="text2">安安安安安</div>
+          </div>
+          <div class="m-pos-link" @click=" toLink('/store/M-POS')">
+            <img src="/images/nav/M-POS.png" />
+            <div class="text1">M-POS 餐飲收銀</div>
+            <div class="text2">安安安安安</div>
+          </div>
+          <div class="m-pos-link">
+            <img src="/images/nav/charge.png" />
+            <div class="text1">收費與服務說明</div>
+            <div class="text2">安安安安安</div>
+          </div>
+        </div>
       </div>
     </transition>
     <transition name="fade">
@@ -96,6 +113,7 @@ export default {
       this.extendMenu = false;
     },
     toLink(path) {
+      this.extendMenu = false;
       this.$router.push(path);
     }
   },
@@ -133,6 +151,33 @@ export default {
 
 
 <style scoped lang="scss">
+$base-font-size: 16px !default;
+@function rem($target, $context: $base-font-size) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @return ($target / $context) + 0rem;
+}
+
+.m-pos-link {
+  img {
+    width: 200px;
+    height: 124px;
+  }
+}
+.flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+
+  .text1 {
+    font-weight: bold;
+    font-size: rem(33px);
+  }
+}
 .left-bg {
   bottom: 0%;
   width: 10%;

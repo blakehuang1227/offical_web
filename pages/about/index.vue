@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class>
     <section class="section1">
       <div class="block">
         <!-- <div class="width-wrap"> -->

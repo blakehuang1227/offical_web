@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class>
     <div class="width-wrap">
       <div class="flex-wrap">test</div>
     </div>

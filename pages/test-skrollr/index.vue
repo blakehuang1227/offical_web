@@ -1,5 +1,5 @@
 <template>
-  <main class="container" id="#skrollr-body">
+  <main class id="#skrollr-body">
     <!-- <section class="slide slide-first">
       <p>This is the first section.</p>
     </section>

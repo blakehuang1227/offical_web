@@ -2,27 +2,33 @@
   <div class="footer">
     <div class="width-wrap">
       <div class="block block1">
-        <div>白吃貓股份有限公司</div>
-        <div>244 新北市林口區文化三路二段357號</div>
-        <div>客服中心： (1000 - 2100 週一到週六)</div>
-        <div>02-2602-6777</div>
-        <div>service@maobc.com.tw</div>
-        <div class="icon-wrap">
-          <div>
-            <img src="images/footer/facebook.png" />
-          </div>
-          <div>
-            <img src="images/footer/instagram.png" />
-          </div>
-          <div>
-            <img src="images/footer/youtube.png" />
+        <div>
+          <div>白吃貓股份有限公司</div>
+          <div>244 新北市林口區文化三路二段357號</div>
+          <div>客服中心： (1000 - 2100 週一到週六)</div>
+          <div>02-2602-6777</div>
+          <div>service@maobc.com.tw</div>
+          <div class="icon-wrap">
+            <div>
+              <img src="images/footer/facebook.png" />
+            </div>
+            <div>
+              <img src="images/footer/instagram.png" />
+            </div>
+            <div>
+              <img src="images/footer/youtube.png" />
+            </div>
           </div>
         </div>
+        <div></div>
       </div>
       <div class="block block2">
-        <div>關於我們｜加入我們｜媒體專區｜聯絡我們</div>
-        <div>常見問題｜使用手冊</div>
-        <div>隱私權政策｜會員契約書｜代理收付服務條款</div>
+        <div>
+          <div>關於我們｜加入我們｜媒體專區｜聯絡我們</div>
+          <div>常見問題｜使用手冊</div>
+          <div>隱私權政策｜會員契約書｜代理收付服務條款</div>
+        </div>
+        <div>©白吃貓股份有限公司 Maobc Co., Ltd.</div>
       </div>
       <div class="block block3">
         <div></div>
@@ -57,12 +63,12 @@ export default {
   width: 33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
 }
 
 .block1 {
-  div:nth-child(1) {
+  div > div:nth-child(1) {
     font-weight: bold;
     font-size: 18px;
   }
@@ -70,6 +76,11 @@ export default {
 
 .block2 {
   font-size: 14px;
+  justify-content: space-around;
+
+  > div:nth-child(2) {
+    color: #6c6c6c;
+  }
 }
 .width-wrap {
   display: flex;

@@ -47,6 +47,12 @@ $device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
   }
 }
 
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
 html {
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
