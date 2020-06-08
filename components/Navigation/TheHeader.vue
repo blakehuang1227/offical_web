@@ -4,7 +4,7 @@
   </div>-->
   <div :key="$route.path">
     <header class="the-header">
-      <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
+      <TheSideNavToggle class="TheSideNavToggle" @toggle="$emit('sidenavToggle')" />
       <div class="logo" @click="navActive='0'">
         <nuxt-link to="/">
           <img class="head-logo" src="@/assets/images/header_icon.png" />

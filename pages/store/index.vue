@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="right-image">
-              <img src="images/store/phone.png" />
+              <img src="/images/store/phone.png" />
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="images/store/phone.png" />
+              <img src="/images/store/phone.png" />
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="images/store/share-customers.svg" />
+              <img src="/images/store/share-customers.svg" />
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="images/store/phone.png" />
+              <img src="/images/store/phone.png" />
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="right-image">
-              <img src="images/store/devices.png" />
+              <img src="/images/store/devices.png" />
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
             <div class="round-row">
               <div>
                 <div class="img-wrap">
-                  <img src="images/store/sample-round.png" />
+                  <img src="/images/store/sample-round.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -112,7 +112,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="images/store/sample-round.png" />
+                  <img src="/images/store/sample-round.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -120,7 +120,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="images/store/sample-round.png" />
+                  <img src="/images/store/sample-round.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -128,7 +128,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="images/store/sample-round.png" />
+                  <img src="/images/store/sample-round.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -136,7 +136,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="images/store/sample-round.png" />
+                  <img src="/images/store/sample-round.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
