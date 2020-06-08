@@ -32,7 +32,8 @@
             :class="{'nav-active':navActive === '3'}"
             @click="showExtend();navActive='3';"
           >
-            <nuxt-link to="/store">店家中心</nuxt-link>
+            <!-- <nuxt-link to="/store">店家中心</nuxt-link>。 -->
+            <a>店家中心</a>
           </li>
           <li
             class="nav-item"
@@ -44,11 +45,7 @@
           <!-- <li class="nav-item">
             <nuxt-link to="/store">下載</nuxt-link>
           </li>-->
-          <li
-            class="nav-item"
-            :class="{'nav-active':navActive === '5'}"
-            @click="showExtend(); navActive='5'"
-          >
+          <li class="nav-item" :class="{'nav-active':navActive === '5'}" @click="navActive='5'">
             <nuxt-link to="/download">下載</nuxt-link>
           </li>
           <li class="nav-item" :class="{'nav-active':navActive === '6'}" @click="navActive='6'">
@@ -72,7 +69,7 @@
             <div class="text1">店老闆享有服務</div>
             <div class="text2">安安安安安</div>
           </div>
-          <div class="m-pos-link" @click=" toLink('/store/M-POS')">
+          <div class="m-pos-link" @click=" toLink('/store/m-pos')">
             <img src="/images/nav/M-POS.png" />
             <div class="text1">M-POS 餐飲收銀</div>
             <div class="text2">安安安安安</div>
@@ -160,6 +157,7 @@ $base-font-size: 16px !default;
 }
 
 .m-pos-link {
+  cursor: pointer;
   img {
     width: 200px;
     height: 124px;

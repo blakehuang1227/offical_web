@@ -1,17 +1,44 @@
 <template>
   <div class>
-    <div class="width-wrap">
-      <div class="flex-wrap">施工中</div>
-    </div>
+    <section class="section1">
+      <div class="block block1">
+        <div class="width-wrap">
+          <div class="flex-wrap">
+            <div class="left-text">
+              <div class="text1">
+                用白吃貓消費
+                <br />拿最高回饋！
+              </div>
+              <div class="text2">立即下載體驗。</div>
+              <div class="flex-wrap">
+                <div class="col-wrap">
+                  <div>
+                    <img src="images/home/apple-store.png" />
+                  </div>
+                  <div>
+                    <img src="images/home/google-store.png" />
+                  </div>
+                </div>
+                <div>
+                  <img src="images/download/qr-code.png" />
+                </div>
+              </div>
+            </div>
+
+            <div class="right-image">
+              <img src="/images/download/iphone_group.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      feeds: []
-    };
+    return {};
   },
   mounted() {}
 };
@@ -28,6 +55,79 @@ $base-font-size: 16px !default;
   @return ($target / $context) + 0rem;
 }
 
+.section1 {
+  height: 100vh;
+  .block1 {
+    height: 100%;
+    .text1 {
+      // text-align: center;
+    }
+
+    .width-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex-wrap {
+      color: #44423e;
+      > div {
+        width: 50%;
+
+        img {
+          margin: 2% 1%;
+        }
+      }
+
+      // .col-wrap {
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: space-between;
+      //   align-content: space-between;
+      //   height: 100%;
+      // }
+    }
+
+    .left-text {
+      img {
+        width: 100%;
+      }
+    }
+
+    .text2 {
+      font-size: rem(33px);
+    }
+
+    .text3 {
+      width: 100%;
+    }
+  }
+}
+.left-text {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  text-align: left;
+
+  > div:nth-child(1) {
+    font-size: rem(66px);
+    line-height: 60px;
+  }
+}
+
+.right-image {
+  width: 50%;
+}
+
+.right-image > img {
+  height: 80%;
+  z-index: 66;
+  object-fit: cover;
+  object-fit: scale-down;
+  width: 100%;
+}
 .container {
   width: 100vw;
   min-height: 100vh;
@@ -47,5 +147,23 @@ $base-font-size: 16px !default;
   height: 100%;
   margin: auto;
   padding: 8% 0;
+}
+
+@media screen and (min-width: 100px) and (max-width: 750px) {
+  .flex-wrap {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .section1 {
+    .block1 {
+      .flex-wrap {
+        .left-text {
+          text-align: center;
+          width: 80%;
+        }
+      }
+    }
+  }
 }
 </style>
