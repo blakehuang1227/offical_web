@@ -13,14 +13,14 @@
               <div class="flex-wrap2">
                 <div class="store-wrap">
                   <div>
-                    <img src="images/home/apple-store.png" />
+                    <img src="/images/home/apple-store.png" />
                   </div>
                   <div>
-                    <img src="images/home/google-store.png" />
+                    <img src="/images/home/google-store.png" />
                   </div>
                 </div>
                 <div>
-                  <img src="images/download/qr-code.png" />
+                  <img src="/images/download/qr-code.png" />
                 </div>
               </div>
             </div>
