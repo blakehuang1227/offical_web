@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="drawer-toggle"
-    role="button"
-    @click="$emit('toggle')">
+  <div class="drawer-toggle" role="button" @click="$emit('toggle')">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
@@ -28,6 +25,6 @@
 .drawer-toggle .bar {
   width: 90%;
   height: 2px;
-  background-color: white;
+  background-color: #f8b62d;
 }
 </style>
