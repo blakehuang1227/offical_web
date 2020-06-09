@@ -11,7 +11,7 @@
             <div class="border-text">收費與服務說明</div>
           </div>
           <div class="right-image">
-            <!-- <img src="images/store/phone.png" /> -->
+            <!-- <img src="/images/store/phone.png" /> -->
           </div>
         </div>
       </div>

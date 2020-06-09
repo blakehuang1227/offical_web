@@ -190,11 +190,21 @@ $base-font-size: 16px !default;
   object-fit: scale-down;
   width: 100%;
 }
+.text1 {
+  letter-spacing: 2.28571px;
+}
+.text2 {
+  letter-spacing: 1.6px;
+}
 
 section {
   height: 100vh;
   width: 100%;
   display: block;
+
+  .block {
+    padding: 3% 2%;
+  }
 }
 .section1 {
   background: url("/images/store/M-POS/section1-bg.png");
@@ -214,6 +224,7 @@ section {
     height: 70%;
     margin: auto;
     justify-content: center;
+    letter-spacing: 2.85714px;
 
     .text1 {
       color: white;
@@ -240,6 +251,8 @@ section {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    white-space: nowrap;
+    letter-spacing: 1.71429px;
 
     > div {
       background: #fff;
@@ -259,6 +272,7 @@ section {
   color: #ffaa00;
   font-size: rem(55px);
   width: 100%;
+  letter-spacing: 2.85714px;
 }
 
 .text1 {
@@ -356,11 +370,6 @@ section {
 }
 
 @media screen and (min-width: 100px) and (max-width: 560px) {
-  // .section1 {
-  //   background-size: contain;
-  //   background-repeat-y: no-repeat;
-  //   height: auto;
-  // }
   section {
     div.block {
       .width-wrap {

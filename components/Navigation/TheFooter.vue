@@ -10,13 +10,13 @@
           <div>service@maobc.com.tw</div>
           <div class="icon-wrap">
             <div>
-              <img src="images/footer/facebook.png" />
+              <img src="/images/footer/facebook.png" />
             </div>
             <div>
-              <img src="images/footer/instagram.png" />
+              <img src="/images/footer/instagram.png" />
             </div>
             <div>
-              <img src="images/footer/youtube.png" />
+              <img src="/images/footer/youtube.png" />
             </div>
           </div>
         </div>

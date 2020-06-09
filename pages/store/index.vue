@@ -82,7 +82,7 @@
               <div class="yellow-title">完善的點餐系統</div>
               <div class="text1">POS、線上多人點餐</div>
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
-              <div>
+              <div class="input-wrap">
                 <input type="button" class="more" value="了解更多" />
               </div>
             </div>
@@ -629,6 +629,18 @@ $base-font-size: 16px !default;
 }
 
 @media screen and (min-width: 100px) and (max-width: 560px) {
+  .section2 {
+    .block2 {
+      .item-wrap {
+        .left-text {
+          .input-wrap {
+            padding: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
   .section3 {
     .block1 {
       .item-wrap {

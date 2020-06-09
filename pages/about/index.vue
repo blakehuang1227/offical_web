@@ -33,7 +33,7 @@
             </div>
 
             <div class="right-image">
-              <img src="images/about/section2-blcok1.png" />
+              <img src="/images/about/section2-blcok1.png" />
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="right-image">
-              <img src="images/about/section2-blcok2.png" />
+              <img src="/images/about/section2-blcok2.png" />
             </div>
           </div>
         </div>
@@ -65,19 +65,19 @@
             <client-only>
               <slick ref="slick" :options="slickOptions" style="width:100%">
                 <div href="http://placehold.it/2000x1000">
-                  <img src="images/about/sample-img.png" alt />
+                  <img src="/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="images/about/sample-img.png" alt />
+                  <img src="/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="images/about/sample-img.png" alt />
+                  <img src="/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="images/about/sample-img.png" alt />
+                  <img src="/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="images/about/sample-img.png" alt />
+                  <img src="/images/about/sample-img.png" alt />
                 </div>
               </slick>
             </client-only>
@@ -348,8 +348,6 @@ section {
       }
       img {
         max-width: 300px;
-        // height: 300px;
-        border: 1px solid #c5c5c5;
       }
     }
   }
@@ -390,19 +388,24 @@ section {
 @media screen and (min-width: 100px) and (max-width: 560px) {
   section {
     div.block {
+      padding: 4% 2%;
       div.item-wrap {
         flex-direction: column !important;
         align-items: center;
-
-        div {
-          height: 50%;
+        .left-text {
+          height: 60%;
           width: 80%;
           overflow: hidden;
-
+          text-align: center;
+          justify-content: space-around;
           .text1 {
             line-height: 24px;
             height: auto;
+            color: black;
           }
+        }
+        .right-image {
+          height: 40%;
         }
       }
     }
@@ -417,13 +420,21 @@ section {
     div.block {
       div.item-wrap {
         flex-direction: column-reverse !important;
+        justify-content: space-between;
+        .left-text {
+          height: 40%;
+        }
       }
     }
   }
 
-  .section1 .block .item-wrap {
-    .right-image {
-      // display: none;
+  section.section3 {
+    .block {
+      .width-wrap {
+        .text1 {
+          text-align: center;
+        }
+      }
     }
   }
 }
