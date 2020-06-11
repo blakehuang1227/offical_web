@@ -206,6 +206,7 @@ section {
     padding: 3% 2%;
   }
 }
+
 .section1 {
   background: url("/images/store/M-POS/section1-bg.png");
   background-size: cover;

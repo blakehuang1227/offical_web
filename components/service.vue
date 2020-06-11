@@ -113,7 +113,7 @@ $base-font-size: 16px !default;
   }
 }
 
-.section-service {
+section.section-service {
   height: 100vh;
   .block1 {
     height: 55%;
@@ -142,6 +142,7 @@ $base-font-size: 16px !default;
   .block2 {
     height: 45%;
     background: url("/images/store/section3-block2-bg.png");
+    // background: linear-gradient(180deg, #ffaa00 0%, #ffd002 100%);
     background-size: cover;
     min-width: 100%;
 
@@ -163,10 +164,15 @@ $base-font-size: 16px !default;
           font-weight: bold;
           line-height: 60px;
           font-size: rem(55px);
+          color: #44423e;
+          font-weight: bold;
+          letter-spacing: 2.85714px;
         }
 
         .text2 {
           line-height: 24px;
+          clor: #44423e;
+          letter-spacing: 1.6px;
         }
         input {
           padding: 2% 0%;
@@ -176,6 +182,8 @@ $base-font-size: 16px !default;
           text-align: center;
           color: white;
           margin-top: 30px;
+          font-size: rem(25px);
+          letter-spacing: -0.24px;
         }
       }
     }

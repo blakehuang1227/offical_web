@@ -170,8 +170,6 @@ export default {
     }
   },
   mounted() {
-    console.error(this.$route.path);
-
     switch (this.$route.path) {
       case "/home":
         this.navActive = "0";
@@ -232,6 +230,7 @@ $base-font-size: 16px !default;
     font-size: rem(33px);
   }
 }
+
 .left-bg {
   bottom: 0%;
   width: 10%;
