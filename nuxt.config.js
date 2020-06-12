@@ -62,5 +62,13 @@ export default {
     ** You can extend webpack config here
     */
 
+  },
+
+  // npm run generate不會產生動態路由
+  // 參照 https://nuxtjs.org/api/configuration-generate#routes
+  generate: {
+    routes: [
+      '/store/m-pos',
+    ]
   }
 }
