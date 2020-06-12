@@ -10,13 +10,13 @@
           <div>service@maobc.com.tw</div>
           <div class="icon-wrap">
             <div>
-              <img src="images/footer/facebook.png" />
+              <img src="/images/footer/facebook.png" />
             </div>
             <div>
-              <img src="images/footer/instagram.png" />
+              <img src="/images/footer/instagram.png" />
             </div>
             <div>
-              <img src="images/footer/youtube.png" />
+              <img src="/images/footer/youtube.png" />
             </div>
           </div>
         </div>
@@ -46,6 +46,15 @@ export default {
 
 
 <style scoped lang="scss">
+$base-font-size: 16px !default;
+
+@function rem($target, $context: $base-font-size) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @return ($target / $context) + 0rem;
+}
+
 .icon-wrap {
   display: flex;
   justify-content: flex-start;
@@ -59,23 +68,24 @@ export default {
 
 .block {
   line-height: 24px;
-  font-size: 14px;
+  font-size: rem(14px);
   width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+  // white-space: break-spaces;
 }
 
 .block1 {
   div > div:nth-child(1) {
     font-weight: bold;
-    font-size: 18px;
+    font-size: rem(14px);
   }
 }
 
 .block2 {
-  font-size: 14px;
+  font-size: rem(14px);
   justify-content: space-around;
 
   > div:nth-child(2) {
@@ -117,7 +127,7 @@ export default {
 }
 
 .footer-items p {
-  font-size: 16px;
+  font-size: rem(16px);
   text-align: justify;
   line-height: 25px;
   color: #fff;
@@ -139,7 +149,7 @@ export default {
 ul {
   list-style: none;
   color: #fff;
-  font-size: 15px;
+  font-size: rem(15px);
   letter-spacing: 0.5px;
 }
 
@@ -167,7 +177,7 @@ li i {
   width: 100%;
   color: #fff;
   text-align: center;
-  font-size: 20px;
+  font-size: rem(14px);
 }
 
 .social-media a {
@@ -191,7 +201,7 @@ li i {
   padding: 10px;
   background: #00121b;
   color: #fff;
-  font-size: 12px;
+  font-size: rem(12px);
   text-align: center;
 }
 
@@ -207,6 +217,15 @@ li i {
 
 @media screen and (max-width: 660px) {
   .footer-items {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .width-wrap {
+    flex-wrap: wrap;
+  }
+  .block {
     width: 100%;
   }
 }

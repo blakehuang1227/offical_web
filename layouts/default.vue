@@ -30,6 +30,7 @@ export default {
 <style  lang="scss">
 @import "~/assets/font/font.css";
 $base-font-size: 16px !default;
+
 @function rem($target, $context: $base-font-size) {
   @if $target == 0 {
     @return 0;
@@ -45,6 +46,9 @@ $device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
       // font-size: 18px;
     }
   }
+}
+* {
+  touch-action: pan-y;
 }
 
 .container {

@@ -2,8 +2,14 @@
   <div class>
     <section class="section1">
       <div class="block block1">
+        <img class="left-bg" src="/images/download/left-bg.png" />
+        <img class="right-bg" src="/images/download/right-bg.png" />
         <div class="width-wrap">
-          <div class="flex-wrap">
+          <div class="switch-wrap">
+            <span :class="{'active-span':type=='member'}" @click="switchType('member')">消費者端</span>
+            <span :class="{'active-span':type=='store'}" @click="switchType('store')">店家端</span>
+          </div>
+          <div class="flex-wrap" v-show="type=='member'">
             <div class="left-text">
               <div class="text1">
                 用白吃貓消費
@@ -25,7 +31,32 @@
               </div>
             </div>
             <div class="right-image">
-              <img src="/images/download/iphone_group.png" />
+              <img src="/images/download/iphone_member.png" />
+            </div>
+          </div>
+          <div class="flex-wrap" v-show="type=='store'">
+            <div class="left-text">
+              <div class="text1">
+                用白吃貓消費
+                <br />拿最高回饋！
+              </div>
+              <div class="text2">立即下載體驗。</div>
+              <div class="flex-wrap2">
+                <div class="store-wrap">
+                  <div>
+                    <img src="/images/home/apple-store.png" />
+                  </div>
+                  <div>
+                    <img src="/images/home/google-store.png" />
+                  </div>
+                </div>
+                <div>
+                  <img src="/images/download/qr-code.png" />
+                </div>
+              </div>
+            </div>
+            <div class="right-image">
+              <img src="/images/download/iphone_store.png" />
             </div>
           </div>
         </div>
@@ -37,9 +68,16 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      type: "member"
+    };
   },
-  mounted() {}
+  mounted() {},
+  methods: {
+    switchType(type) {
+      this.type = type;
+    }
+  }
 };
 </script>
 
@@ -54,16 +92,36 @@ $base-font-size: 16px !default;
   @return ($target / $context) + 0rem;
 }
 
-.right-image {
-  width: 50%;
+.right-bg {
+  width: 35%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 
-.right-image > img {
-  height: 80%;
-  z-index: 66;
-  object-fit: cover;
-  object-fit: scale-down;
-  width: 100%;
+.left-bg {
+  bottom: 8%;
+  width: 25%;
+  position: absolute;
+  z-index: -1;
+}
+
+.active-span {
+  background: #44423e;
+  color: white;
+}
+
+.left-text {
+  // height: 80%;
+}
+.right-image {
+  width: 50%;
+  height: 90%;
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-fit: scale-down;
+  }
 }
 .container {
   width: 100vw;
@@ -85,20 +143,50 @@ $base-font-size: 16px !default;
   height: 100%;
   margin: auto;
   padding: 8% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-wrap {
+  text-align: center;
+  font-size: 0;
+  cursor: pointer;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+
+  span {
+    padding: 2% 4%;
+    border: 3px solid #44423e;
+    display: inline-block;
+    font-size: rem(33px);
+    width: 170px;
+    float: left;
+  }
+  span:nth-child(1) {
+    border-radius: 8px 0px 0px 8px;
+    // border-right: 0px;
+  }
+  span:nth-child(2) {
+    border-radius: 0px 8px 8px 0px;
+    // border-left: 0px;
+  }
 }
 
 .section1 {
   height: 100vh;
   .block1 {
     height: 100%;
+    position: relative;
     .text1 {
       font-weight: bold;
       letter-spacing: 2.85714px;
     }
 
     .width-wrap {
+      z-index: 66;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
     .left-text {
@@ -108,7 +196,7 @@ $base-font-size: 16px !default;
     .flex-wrap {
       color: #44423e;
       text-align: left;
-
+      min-height: 40vh;
       .flex-wrap2 {
         display: flex;
         // height: 100%;

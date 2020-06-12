@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div id="store">
     <section class="section section1">
       <div>
         <div class="block1 block">
-          <img class="right-bg" src="/images/store/block1-bg.png" />
-          <img class="left-bg" src="/images/store/block1-bg2.png" />
-          <img class="left-bg2" src="/images/store/block1-bg3.png" />
           <div class="item-wrap">
+            <img class="left-bg" src="/images/store/block1-bg2.png" />
+            <img class="left-bg2" src="/images/store/block1-bg3.png" />
             <div class="left-text">
               <div class="text1">
                 頭家&nbsp;&nbsp;你們的痛我們懂
@@ -26,13 +25,10 @@
                 </div>
               </div>
             </div>
-            <div class="right-image">
-              <img src="/images/store/phone.png" />
-            </div>
+            <div class="right-image"></div>
           </div>
         </div>
         <div class="block2 block" id="anchor1">
-          <img class="left-bg" src="/images/store/block2-bg.png" />
           <img class="right-bg" src="/images/store/block2-bg2.png" />
           <img class="right-bg2" src="/images/store/block2-bg3.png" />
           <img class="right-bg3" src="/images/store/block2-bg4.png" />
@@ -43,7 +39,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/phone.png" />
+              <img src="/images/store/section1-block2-mobile.png" />
             </div>
           </div>
         </div>
@@ -56,7 +52,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/share-customers.svg" />
+              <img src="/images/store/share-customers.png" />
             </div>
           </div>
         </div>
@@ -72,7 +68,22 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/phone.png" />
+              <div class="carousel-wrap">
+                <client-only>
+                  <slick ref="slick" :options="slickOptions" style="width:100%">
+                    <div>
+                      <img src="/images/store/section2-block2-mobile1.png" />
+                    </div>
+                    <div>
+                      <img src="/images/store/section2-block2-mobile2.png" />
+                    </div>
+                    <div>
+                      <img src="/images/store/section2-block2-mobile3.png" />
+                    </div>
+                  </slick>
+                </client-only>
+                <!-- </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +93,7 @@
               <div class="yellow-title">完善的點餐系統</div>
               <div class="text1">POS、線上多人點餐</div>
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
-              <div>
+              <div class="input-wrap">
                 <input type="button" class="more" value="了解更多" />
               </div>
             </div>
@@ -104,7 +115,7 @@
             <div class="round-row">
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/sample-round.png" />
+                  <img src="/images/store/section2-block2-icon1.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -112,7 +123,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/sample-round.png" />
+                  <img src="/images/store/section2-block2-icon2.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -120,7 +131,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/sample-round.png" />
+                  <img src="/images/store/section2-block2-icon3.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -128,7 +139,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/sample-round.png" />
+                  <img src="/images/store/section2-block2-icon4.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -136,7 +147,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/sample-round.png" />
+                  <img src="/images/store/section2-block2-icon5.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -149,24 +160,27 @@
     </section>
     <service id="anchor6"></service>
     <!-- <h1 class="title">Store</h1>
-      <h2 class="subtitle"></h2>
-      <div class="links">
-        <a @click="fireGA('點擊商品A', 500)" class="button--green">A</a>
-        <a @click="fireGA('點擊商品B', 200)" class="button--green">B</a>
-        <a class="button--green">C</a>
+    <h2 class="subtitle"></h2>
+    <div class="links">
+      <a @click="fireGA('點擊商品A', 500)" class="button--green">A</a>
+      <a @click="fireGA('點擊商品G', 200)" class="button--green">G</a>
+      <a class="button--green">C</a>
     </div>-->
   </div>
 </template>
 
 <script>
 import service from "~/components/service";
+import "~/node_modules/slick-carousel/slick/slick.css";
+import "~/node_modules/slick-carousel/slick/slick-theme.css";
 export default {
   middleware: "routerAuth",
   meta: {
     requiresAuth: false
   },
   components: {
-    service
+    service,
+    Slick: () => import("vue-slick")
   },
   head() {
     return {
@@ -175,6 +189,36 @@ export default {
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         { hid: "店家資訊", name: "店家資訊", content: "店家資訊" }
       ]
+    };
+  },
+  data() {
+    return {
+      slickOptions: {
+        slidesToShow: 1,
+        mobileFirst: true,
+        infinite: false,
+        variableWidth: true,
+        arrows: false,
+        dots: true
+        // centerMode: true,
+        // responsive: [
+        //   {
+        //     breakpoint: 600,
+        //     settings: {
+        //       slidesToShow: 2,
+        //       slidesToScroll: 2
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 320,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //       arrows: true
+        //     }
+        //   }
+        // ]
+      }
     };
   },
   mounted() {
@@ -294,47 +338,12 @@ $base-font-size: 16px !default;
       width: 50%;
     }
     .right-image > img {
-      height: 80%;
+      height: 100%;
       z-index: 66;
       object-fit: cover;
       object-fit: scale-down;
       width: 100%;
     }
-  }
-}
-
-.block1 {
-  .left-bg {
-    left: 5%;
-    top: 10%;
-    width: 17%;
-    position: absolute;
-    z-index: -1;
-  }
-  .left-bg2 {
-    left: 5%;
-    top: 34%;
-    width: 5%;
-    position: absolute;
-    z-index: -1;
-  }
-  .right-bg {
-    width: 60%;
-    top: -60px;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
-
-  // div.text1 {
-  //   font-size: rem(44px);
-  // }
-
-  // div.text2 {
-  //   font-size: rem(22px);
-  // }
-  div.text3 {
-    margin-top: 40px;
   }
 }
 
@@ -352,22 +361,22 @@ $base-font-size: 16px !default;
   .right-bg {
     // left: 0;
     right: 0;
-    top: 45%;
+    top: 25%;
     width: 25%;
     position: absolute;
     z-index: -1;
   }
   .right-bg2 {
     width: 5%;
-    top: 30%;
-    right: 3%;
+    top: 20%;
+    right: 11%;
     position: absolute;
     z-index: -1;
   }
   .right-bg3 {
-    width: 10%;
-    bottom: -10%;
-    right: 7%;
+    width: 8%;
+    bottom: -25%;
+    right: 11%;
     position: absolute;
     z-index: -1;
   }
@@ -388,17 +397,43 @@ $base-font-size: 16px !default;
 }
 
 .section1 {
+  height: 200vh;
   .block1 {
-    .text1 {
-      // margin-bottom: 10px;
+    background-image: url(/images/store/section1-block1-bg.png);
+    background-size: cover;
+    height: 100vh;
+
+    .item-wrap {
+      position: relative;
+    }
+    .left-bg {
+      left: -10%;
+      top: 25%;
+      width: 28%;
+      position: absolute;
+      // z-index: 1;
+    }
+    .left-bg2 {
+      left: -12%;
+      top: 37%;
+      width: 8%;
+      position: absolute;
     }
 
-    div.left-text {
-      // align-items: flex-start;
-    }
+    .item-wrap {
+      .left-text {
+        z-index: 5;
+        .text1 {
+          font-weight: bold;
+          color: #44423e;
+          letter-spacing: 2.85714px;
+        }
 
-    .text3 {
-      width: 100%;
+        .text3 {
+          width: 100%;
+          margin-top: 40px;
+        }
+      }
     }
 
     .link-wrap {
@@ -407,27 +442,49 @@ $base-font-size: 16px !default;
       // justify-content: center;
       // width: 90%;
       .link {
-        border: 1px solid #757575;
         margin: 1% 2% 1% 0%;
         border-radius: 8px;
-        width: 30%;
         font-size: rem(30px);
-        min-height: 60px;
-        min-width: 100px;
         justify-content: center;
         align-items: center;
         display: flex;
         white-space: nowrap;
-        padding: 0% 4%;
         cursor: pointer;
+        background: #fff;
+        letter-spacing: 1.71px;
+        padding: 3% 3%;
+        margin: 1%;
+        min-width: 100px;
+        font-size: 1.5625rem;
+        max-height: 81px;
+        cursor: pointer;
+        box-shadow: 1px 1px 20px -10px rgba(0, 0, 0, 1);
+        color: #44423e;
       }
     }
+  }
+  .block2 {
+    height: 50vh;
+  }
+  .block3 {
+    height: 50vh;
   }
 }
 
 .section2 {
   .item-wrap {
     flex-direction: row-reverse;
+  }
+
+  .carousel-wrap {
+    width: 100%;
+  }
+
+  .slick-slide {
+    img {
+      width: 50%;
+      height: 100%;
+    }
   }
 
   .block1 {
@@ -514,6 +571,7 @@ $base-font-size: 16px !default;
 
     .img-wrap > img {
       width: 50%;
+      max-height: 88px;
     }
 
     .round-row {
@@ -523,6 +581,13 @@ $base-font-size: 16px !default;
       width: 70%;
       margin: 7% auto;
       font-size: rem(28px);
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
       .fa-check-circle {
         color: #ffaa00;
         margin: 0 3px;
@@ -532,7 +597,7 @@ $base-font-size: 16px !default;
         margin-top: 30px;
 
         svg {
-          font-size: 22px;
+          font-size: rem(30px);
         }
       }
     }
@@ -629,6 +694,18 @@ $base-font-size: 16px !default;
 }
 
 @media screen and (min-width: 100px) and (max-width: 560px) {
+  .section2 {
+    .block2 {
+      .item-wrap {
+        .left-text {
+          .input-wrap {
+            padding: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
   .section3 {
     .block1 {
       .item-wrap {
@@ -674,13 +751,51 @@ $base-font-size: 16px !default;
   padding-top: 15px;
 }
 
-$device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
-@each $current-device in $device-list {
-  @media screen and (min-width: $current-device) {
-    body,
-    html {
-      font-size: $current-device * 0;
+@media screen and (min-width: 100px) and (max-width: 560px) {
+  section {
+    div.block {
+      div.item-wrap > div {
+        width: 80%;
+      }
     }
   }
+
+  .section1 {
+    height: 300vh;
+    .block1 {
+      height: 100vh;
+    }
+    .block2 {
+      height: 100vh;
+    }
+    .block3 {
+      height: 100vh;
+    }
+  }
+
+  .section2 {
+    .block1 {
+      height: 100vh;
+
+      .item-wrap {
+        margin: 2% auto;
+        > div:nth-child(1) {
+          width: 100%;
+        }
+
+        div.right-image {
+          width: 90%;
+        }
+      }
+    }
+    .block2 {
+      height: 100vh;
+    }
+  }
+}
+</style>
+<style>
+#store .slick-dots {
+  bottom: 20px;
 }
 </style>

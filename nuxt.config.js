@@ -54,6 +54,9 @@ export default {
           })
         ]
       }
+      else {
+        config.devtool = 'eval-source-map';
+      }
     },
     /*
     ** You can extend webpack config here

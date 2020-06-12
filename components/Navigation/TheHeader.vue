@@ -4,11 +4,11 @@
   </div>-->
   <div :key="$route.path">
     <header class="the-header">
-      <TheSideNavToggle class="TheSideNavToggle" @toggle="$emit('sidenavToggle')" />
-      <div class="logo" @click="navActive='0'">
-        <nuxt-link to="/">
+      <TheSideNavToggle class="TheSideNavToggle" @toggle="sidenavToggle" />
+      <div class="logo" @click="navActive='0'; toLink('/')">
+        <a>
           <img class="head-logo" src="@/assets/images/header_icon.png" />
-        </nuxt-link>
+        </a>
       </div>
       <div class="spacer"></div>
       <div class="navigation-items">
@@ -32,7 +32,6 @@
             :class="{'nav-active':navActive === '3'}"
             @click="showExtend();navActive='3';"
           >
-            <!-- <nuxt-link to="/store">店家中心</nuxt-link>。 -->
             <a>店家中心</a>
           </li>
           <li
@@ -42,9 +41,6 @@
           >
             <nuxt-link to="/join-us">加入我們</nuxt-link>
           </li>
-          <!-- <li class="nav-item">
-            <nuxt-link to="/store">下載</nuxt-link>
-          </li>-->
           <li class="nav-item" :class="{'nav-active':navActive === '5'}" @click="navActive='5'">
             <nuxt-link to="/download">下載</nuxt-link>
           </li>
@@ -85,6 +81,57 @@
     <transition name="fade">
       <div class="mask" v-if="extendMenu" @click="collapeMenu"></div>
     </transition>
+    <div class="navigation-items2" v-if="showNav">
+      <ul class="nav-list">
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '1'}"
+          @click="navActive='1'; toLink('/about')"
+        >
+          <nuxt-link to="/about">關於我們</nuxt-link>
+        </li>
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '2'}"
+          @click="navActive='2'; toLink('/news')"
+        >
+          <a>最新消息</a>
+        </li>
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '3'}"
+          @click="showExtend();navActive='3';"
+        >
+          <a>店家中心</a>
+        </li>
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '4'}"
+          @click="navActive='4'; toLink('/join-us')"
+        >
+          <a>加入我們</a>
+        </li>
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '5'}"
+          @click="navActive='5' ; toLink('/download')"
+        >
+          <a>下載</a>
+        </li>
+        <li
+          class="nav-item"
+          :class="{'nav-active':navActive === '6'}"
+          @click="navActive='6'; toLink('/service')"
+        >
+          <a>企業服務</a>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/admin">
+            <input type="button" class="btn-login" value="註冊/登入" />
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -99,24 +146,30 @@ export default {
   data() {
     return {
       extendMenu: false,
-      navActive: "0"
+      navActive: "0",
+      showNav: false
     };
   },
   methods: {
     showExtend() {
+      this.showNav = false;
       this.extendMenu = !this.extendMenu;
     },
     collapeMenu() {
       this.extendMenu = false;
     },
     toLink(path) {
+      console.log("path");
       this.extendMenu = false;
+      this.showNav = false;
       this.$router.push(path);
+    },
+
+    sidenavToggle() {
+      this.showNav = !this.showNav;
     }
   },
   mounted() {
-    console.error(this.$route.path);
-
     switch (this.$route.path) {
       case "/home":
         this.navActive = "0";
@@ -157,15 +210,16 @@ $base-font-size: 16px !default;
 }
 
 .m-pos-link {
+  width: 25%;
   cursor: pointer;
   img {
-    width: 200px;
-    height: 124px;
+    width: 100%;
+    // height: 124px;
   }
 }
 .flex-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 60%;
@@ -176,6 +230,7 @@ $base-font-size: 16px !default;
     font-size: rem(33px);
   }
 }
+
 .left-bg {
   bottom: 0%;
   width: 10%;
@@ -327,5 +382,42 @@ a:active {
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
   // color: red;
+}
+
+// @media screen and (min-width: 100px) and (max-width: 850px) {
+//   .navigation-items{
+
+//   }
+// }
+
+.navigation-items2 {
+  z-index: 88;
+  position: absolute;
+  background-color: #fff;
+  height: 100vh;
+  top: 60px;
+  width: 100%;
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+
+    .nav-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #c7c7c7;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  .folder {
+    height: 70vh;
+  }
+  .flex-wrap {
+    flex-direction: column;
+  }
+  .m-pos-link {
+    width: 70%;
+  }
 }
 </style>
