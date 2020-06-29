@@ -6,7 +6,7 @@
         <div class="item-wrap">
           <div class="left-text">
             <div class="text1">
-              讓天下沒有難開的店
+              ABCDEFGHIJ
               <br />創造消費無限可能
             </div>
             <div>
@@ -24,16 +24,16 @@
         <div class="width-wrap">
           <div class="item-wrap">
             <div class="left-text">
-              <div class="text1">讓天下沒有難開的店</div>
+              <div class="text1">ABCDEFGHIJ</div>
               <div class="text2">
-                我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，
-                能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，
-                能blablabla文字串我們深信透過 maobc 平台，能blablabla文
+                我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，
+                能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，
+                能blablabla文字串我們深信透過 abcdefg，能blablabla文
               </div>
             </div>
 
             <div class="right-image">
-              <img src="/images/about/section2-blcok1.png" />
+              <img src="/official_web/images/about/section2-blcok1.png" />
             </div>
           </div>
         </div>
@@ -42,14 +42,14 @@
         <div class="width-wrap">
           <div class="item-wrap">
             <div class="left-text">
-              <div class="text1">讓天下沒有難開的店</div>
+              <div class="text1">ABCDEFGHIJ</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
 
             <div class="right-image">
-              <img src="/images/about/section2-blcok2.png" />
+              <img src="/official_web/images/about/section2-blcok2.png" />
             </div>
           </div>
         </div>
@@ -65,19 +65,19 @@
             <client-only>
               <slick ref="slick" :options="slickOptions" style="width:100%">
                 <div href="http://placehold.it/2000x1000">
-                  <img src="/images/about/sample-img.png" alt />
+                  <img src="/official_web/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="/images/about/sample-img.png" alt />
+                  <img src="/official_web/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="/images/about/sample-img.png" alt />
+                  <img src="/official_web/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="/images/about/sample-img.png" alt />
+                  <img src="/official_web/images/about/sample-img.png" alt />
                 </div>
                 <div href="http://placehold.it/2000x1000">
-                  <img src="/images/about/sample-img.png" alt />
+                  <img src="/official_web/images/about/sample-img.png" alt />
                 </div>
               </slick>
             </client-only>
@@ -155,9 +155,9 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://maobc.com.tw/assets/img/index/bannerfb.jpg"
+          content: ""
         },
-        { hid: "og:title", property: "og:title", content: "關於白吃貓" }
+        { hid: "og:title", property: "og:title", content: "" }
       ]
     };
   },
@@ -268,7 +268,7 @@ section {
 }
 
 .section1 {
-  background: url("/images/about/section1-bg.png");
+  background: url("/official_web/images/about/section1-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

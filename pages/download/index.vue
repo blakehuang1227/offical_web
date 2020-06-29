@@ -2,8 +2,8 @@
   <div class>
     <section class="section1">
       <div class="block block1">
-        <img class="left-bg" src="/images/download/left-bg.png" />
-        <img class="right-bg" src="/images/download/right-bg.png" />
+        <img class="left-bg" src="/official_web/images/download/left-bg.png" />
+        <img class="right-bg" src="/official_web/images/download/right-bg.png" />
         <div class="width-wrap">
           <div class="switch-wrap">
             <span :class="{'active-span':type=='member'}" @click="switchType('member')">消費者端</span>
@@ -12,51 +12,51 @@
           <div class="flex-wrap" v-show="type=='member'">
             <div class="left-text">
               <div class="text1">
-                用白吃貓消費
+                用XXX消費
                 <br />拿最高回饋！
               </div>
               <div class="text2">立即下載體驗。</div>
               <div class="flex-wrap2">
                 <div class="store-wrap">
                   <div>
-                    <img src="/images/home/apple-store.png" />
+                    <img src="/official_web/images/home/apple-store.png" />
                   </div>
                   <div>
-                    <img src="/images/home/google-store.png" />
+                    <img src="/official_web/images/home/google-store.png" />
                   </div>
                 </div>
                 <div>
-                  <img src="/images/download/qr-code.png" />
+                  <img src="/official_web/images/download/qr-code.png" />
                 </div>
               </div>
             </div>
             <div class="right-image">
-              <img src="/images/download/iphone_member.png" />
+              <img src="/official_web/images/download/iphone_member.png" />
             </div>
           </div>
           <div class="flex-wrap" v-show="type=='store'">
             <div class="left-text">
               <div class="text1">
-                用白吃貓消費
+                用XXX消費
                 <br />拿最高回饋！
               </div>
               <div class="text2">立即下載體驗。</div>
               <div class="flex-wrap2">
                 <div class="store-wrap">
                   <div>
-                    <img src="/images/home/apple-store.png" />
+                    <img src="/official_web/images/home/apple-store.png" />
                   </div>
                   <div>
-                    <img src="/images/home/google-store.png" />
+                    <img src="/official_web/images/home/google-store.png" />
                   </div>
                 </div>
                 <div>
-                  <img src="/images/download/qr-code.png" />
+                  <img src="/official_web/images/download/qr-code.png" />
                 </div>
               </div>
             </div>
             <div class="right-image">
-              <img src="/images/download/iphone_store.png" />
+              <img src="/official_web/images/download/iphone_store.png" />
             </div>
           </div>
         </div>
@@ -144,6 +144,7 @@ $base-font-size: 16px !default;
   margin: auto;
   padding: 8% 0;
   display: flex;
+  // margin-top: 60px;
   flex-direction: column;
 }
 
@@ -276,9 +277,12 @@ $base-font-size: 16px !default;
 
   .section1 {
     .block1 {
+      .switch-wrap {
+        padding-top: 50px;
+      }
       .flex-wrap {
         margin: auto;
-
+        flex-direction: row;
         .left-text {
           text-align: center;
           width: 90%;
@@ -286,6 +290,7 @@ $base-font-size: 16px !default;
         }
 
         .right-image {
+          height: 50%;
           img {
             height: 100%;
           }

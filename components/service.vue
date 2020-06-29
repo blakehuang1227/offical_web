@@ -11,7 +11,7 @@
             <div class="border-text">收費與服務說明</div>
           </div>
           <div class="right-image">
-            <!-- <img src="/images/store/phone.png" /> -->
+            <!-- <img src="/official_web/images/store/phone.png" /> -->
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ section.section-service {
   height: 100vh;
   .block1 {
     height: 55%;
-    background: url("/images/store/section3-block1-bg.png");
+    background: url("/official_web/images/store/section3-block1-bg.png");
     background-size: cover;
     min-width: 100%;
 
@@ -141,7 +141,7 @@ section.section-service {
   }
   .block2 {
     height: 45%;
-    background: url("/images/store/section3-block2-bg.png");
+    background: url("/official_web/images/store/section3-block2-bg.png");
     // background: linear-gradient(180deg, #ffaa00 0%, #ffd002 100%);
     background-size: cover;
     min-width: 100%;

@@ -4,19 +4,19 @@
       <div>
         <div class="block1 block">
           <div class="item-wrap">
-            <img class="left-bg" src="/images/store/block1-bg2.png" />
-            <img class="left-bg2" src="/images/store/block1-bg3.png" />
+            <img class="left-bg" src="/official_web/images/store/block1-bg2.png" />
+            <img class="left-bg2" src="/official_web/images/store/block1-bg3.png" />
             <div class="left-text">
               <div class="text1">
-                頭家&nbsp;&nbsp;你們的痛我們懂
-                <br />新時代&nbsp;&nbsp;我們一起打拼
+                ADFSFAFSAFSA
+                <br />AFSFAFSAFSAFASF
               </div>
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
               <div class="text3">
                 <div class="link-wrap">
                   <div class="link" v-scroll-to="'#anchor1'">品牌行銷</div>
                   <div class="link" v-scroll-to="'#anchor2'">共享流量</div>
-                  <div class="link" v-scroll-to="'#anchor3'">M—POS點餐</div>
+                  <div class="link" v-scroll-to="'#anchor3'">POS點餐</div>
                 </div>
                 <div class="link-wrap">
                   <div class="link" v-scroll-to="'#anchor4'">營銷管理</div>
@@ -29,9 +29,9 @@
           </div>
         </div>
         <div class="block2 block" id="anchor1">
-          <img class="right-bg" src="/images/store/block2-bg2.png" />
-          <img class="right-bg2" src="/images/store/block2-bg3.png" />
-          <img class="right-bg3" src="/images/store/block2-bg4.png" />
+          <img class="right-bg" src="/official_web/images/store/block2-bg2.png" />
+          <img class="right-bg2" src="/official_web/images/store/block2-bg3.png" />
+          <img class="right-bg3" src="/official_web/images/store/block2-bg4.png" />
           <div class="item-wrap">
             <div class="left-text">
               <div class="yellow-title">品牌行銷</div>
@@ -39,12 +39,12 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/section1-block2-mobile.png" />
+              <img src="/official_web/images/store/section1-block2-mobile.png" />
             </div>
           </div>
         </div>
         <div class="block3 block" id="anchor2">
-          <img class="left-bg" src="/images/store/block3-bg1.png" />
+          <img class="left-bg" src="/official_web/images/store/block3-bg1.png" />
           <div class="item-wrap">
             <div class="left-text">
               <div class="yellow-title">共享平台流量</div>
@@ -52,7 +52,7 @@
               <div class="text2">從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事從線上行銷到訂單管理，一手掌握所有店內大小事。</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/share-customers.png" />
+              <img src="/official_web/images/store/share-customers.png" />
             </div>
           </div>
         </div>
@@ -72,13 +72,13 @@
                 <client-only>
                   <slick ref="slick" :options="slickOptions" style="width:100%">
                     <div>
-                      <img src="/images/store/section2-block2-mobile1.png" />
+                      <img src="/official_web/images/store/section2-block2-mobile1.png" />
                     </div>
                     <div>
-                      <img src="/images/store/section2-block2-mobile2.png" />
+                      <img src="/official_web/images/store/section2-block2-mobile2.png" />
                     </div>
                     <div>
-                      <img src="/images/store/section2-block2-mobile3.png" />
+                      <img src="/official_web/images/store/section2-block2-mobile3.png" />
                     </div>
                   </slick>
                 </client-only>
@@ -98,14 +98,14 @@
               </div>
             </div>
             <div class="right-image">
-              <img src="/images/store/devices.png" />
+              <img src="/official_web/images/store/devices.png" />
             </div>
           </div>
         </div>
         <div class="block3 block" id="anchor5">
           <div class="text1">
             從此開始
-            <br />讓天下沒有難開的店
+            <br />ABCDEFGHIJ
           </div>
           <div class="text2">
             幫助您從線上行銷推廣到訂單管理，一手掌握所有店內大小事、
@@ -115,7 +115,7 @@
             <div class="round-row">
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/section2-block2-icon1.png" />
+                  <img src="/official_web/images/store/section2-block2-icon1.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -123,7 +123,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/section2-block2-icon2.png" />
+                  <img src="/official_web/images/store/section2-block2-icon2.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -131,7 +131,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/section2-block2-icon3.png" />
+                  <img src="/official_web/images/store/section2-block2-icon3.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -139,7 +139,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/section2-block2-icon4.png" />
+                  <img src="/official_web/images/store/section2-block2-icon4.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -147,7 +147,7 @@
               </div>
               <div>
                 <div class="img-wrap">
-                  <img src="/images/store/section2-block2-icon5.png" />
+                  <img src="/official_web/images/store/section2-block2-icon5.png" />
                 </div>
                 <div class="text">
                   <font-awesome-icon :icon="['fas', 'check-circle']" />創造顧客回饋
@@ -399,7 +399,7 @@ $base-font-size: 16px !default;
 .section1 {
   height: 200vh;
   .block1 {
-    background-image: url(/images/store/section1-block1-bg.png);
+    background-image: url(/official_web/images/store/section1-block1-bg.png);
     background-size: cover;
     height: 100vh;
 
@@ -488,7 +488,7 @@ $base-font-size: 16px !default;
   }
 
   .block1 {
-    background: url("/images/store/section2-block1-bg.png");
+    background: url("/official_web/images/store/section2-block1-bg.png");
     background-size: cover;
     display: flex;
     width: 100%;
@@ -608,7 +608,7 @@ $base-font-size: 16px !default;
   height: 100vh;
   .block1 {
     height: 55%;
-    background: url("/images/store/section3-block1-bg.png");
+    background: url("/official_web/images/store/section3-block1-bg.png");
     background-size: cover;
     min-width: 100%;
 
@@ -632,7 +632,7 @@ $base-font-size: 16px !default;
   }
   .block2 {
     height: 45%;
-    background: url("/images/store/section3-block2-bg.png");
+    background: url("/official_web/images/store/section3-block2-bg.png");
     background-size: cover;
     min-width: 100%;
 

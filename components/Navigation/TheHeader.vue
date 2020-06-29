@@ -4,7 +4,6 @@
   </div>-->
   <div :key="$route.path">
     <header class="the-header">
-      <TheSideNavToggle class="TheSideNavToggle" @toggle="sidenavToggle" />
       <div class="logo" @click="navActive='0'; toLink('/')">
         <a>
           <img class="head-logo" src="@/assets/images/header_icon.png" />
@@ -48,7 +47,7 @@
             <nuxt-link to="/service">企業服務</nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link to="/admin">
+            <nuxt-link to="/login">
               <input type="button" class="btn-login" value="註冊/登入" />
             </nuxt-link>
           </li>
@@ -57,21 +56,21 @@
     </header>
     <transition name="fade">
       <div class="folder" v-if="extendMenu">
-        <img class="right-bg" src="/images/nav/right-bg.png" />
-        <img class="left-bg" src="/images/nav/left-bg.png" />
+        <img class="right-bg" src="/official_web/images/nav/right-bg.png" />
+        <img class="left-bg" src="/official_web/images/nav/left-bg.png" />
         <div class="flex-wrap">
           <div class="m-pos-link" @click=" toLink('/store')">
-            <img src="/images/nav/store.png" />
+            <img src="/official_web/images/nav/store.png" />
             <div class="text1">店老闆享有服務</div>
             <div class="text2">安安安安安</div>
           </div>
           <div class="m-pos-link" @click=" toLink('/store/m-pos')">
-            <img src="/images/nav/M-POS.png" />
+            <img src="/official_web/images/nav/M-POS.png" />
             <div class="text1">M-POS 餐飲收銀</div>
             <div class="text2">安安安安安</div>
           </div>
           <div class="m-pos-link">
-            <img src="/images/nav/charge.png" />
+            <img src="/official_web/images/nav/charge.png" />
             <div class="text1">收費與服務說明</div>
             <div class="text2">安安安安安</div>
           </div>
@@ -136,13 +135,9 @@
 </template>
 
 <script>
-import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle";
-
 export default {
   name: "TheHeader",
-  components: {
-    TheSideNavToggle
-  },
+  components: {},
   data() {
     return {
       extendMenu: false,
@@ -201,6 +196,16 @@ export default {
 
 
 <style scoped lang="scss">
+$device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px 800px 900px;
+@each $current-device in $device-list {
+  @media screen and (min-width: $current-device) {
+    body,
+    html {
+      font-size: $current-device * 0.015;
+      // font-size: 18px;
+    }
+  }
+}
 $base-font-size: 16px !default;
 @function rem($target, $context: $base-font-size) {
   @if $target == 0 {
@@ -211,6 +216,7 @@ $base-font-size: 16px !default;
 
 .m-pos-link {
   width: 25%;
+  min-width: 150px;
   cursor: pointer;
   img {
     width: 100%;
@@ -290,6 +296,7 @@ $base-font-size: 16px !default;
 
 .head-logo {
   width: 176px;
+  cursor: pointer;
 }
 
 .btn-login {
@@ -357,6 +364,12 @@ a:active {
     display: block;
     height: 100%;
   }
+
+  .folder {
+    .flex-wrap {
+      width: 80%;
+    }
+  }
 }
 
 .nav-list {
@@ -406,6 +419,12 @@ a:active {
       padding: 10px 0;
       border-bottom: 1px solid #c7c7c7;
     }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .flex-wrap {
+    width: 80%;
   }
 }
 

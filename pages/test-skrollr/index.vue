@@ -20,12 +20,12 @@
     </section>-->
     <section class="slide sticky slide1">
       <div class="section1-imgs-wrap" data-aos="fade-in">
-        <img src="/images/home/section1-1.png" />
-        <img src="/images/home/section1-2.png" />
-        <img src="/images/home/section1-3.png" />
-        <img src="/images/home/section1-4.png" />
-        <img src="/images/home/section1-5.png" />
-        <img src="/images/home/section1-6.png" />
+        <img src="/official_web/images/home/section1-1.png" />
+        <img src="/official_web/images/home/section1-2.png" />
+        <img src="/official_web/images/home/section1-3.png" />
+        <img src="/official_web/images/home/section1-4.png" />
+        <img src="/official_web/images/home/section1-5.png" />
+        <img src="/official_web/images/home/section1-6.png" />
       </div>
     </section>
     <section class="slide sticky slide2">
@@ -34,7 +34,7 @@
           <div>回饋最高</div>
           <div class="percentage">100%</div>
           <div class="info">
-            <div>使用maobc pay消費，就送您回饋紅包，</div>
+            <div>使用XXX pay消費，就送您回饋紅包，</div>
             <div>每次紅包回饋%都不一樣，快來試試你的好手氣。</div>
           </div>
         </div>
@@ -146,11 +146,11 @@ export default {
       if (speed < 20 + target && this.dilutedFrames.includes(frame)) {
         this.nextFrame(target, frame + 1, speed);
       } else if (speed > 60 + target && this.finalFrames.includes(frame)) {
-        coin.src = `/images/coin/${frame}.png`;
+        coin.src = `/official_web/images/coin/${frame}.png`;
         coin.classList.remove("spinning");
         coin.classList.add("finished");
       } else {
-        coin.src = `/images/coin/${frame}.png`;
+        coin.src = `/official_web/images/coin/${frame}.png`;
         setTimeout(
           () => this.nextFrame(target, frame < 20 ? frame + 1 : 1, ++speed),
           speed
@@ -173,7 +173,7 @@ export default {
       console.log("scrollTop:" + scrollTop);
 
       let img = ((scrollTop / 30) % 19) + 1;
-      newImageUrl = `/images/coin/${Math.round(img)}.png`;
+      newImageUrl = `/official_web/images/coin/${Math.round(img)}.png`;
       console.log("img:" + Math.round(img));
 
       if (scrollTop < 260 && scrollTop > 0) {
@@ -189,13 +189,13 @@ export default {
 
       coin.classList.remove("fuck");
       // if (scrollTop <= 100) {
-      //   newImageUrl = `/images/coin/coin${16}.png`;
+      //   newImageUrl = `/official_web/images/coin/coin${16}.png`;
       // } else if (scrollTop > 100) {
-      //   newImageUrl = `/images/coin/coin${15}.png`;
+      //   newImageUrl = `/official_web/images/coin/coin${15}.png`;
       // } else if (scrollTop > 200) {
-      //   newImageUrl = `/images/coin/coin${6}.png`;
+      //   newImageUrl = `/official_web/images/coin/coin${6}.png`;
       // } else if (scrollTop > 300) {
-      //   newImageUrl = `/images/coin/coin${20}.png`;
+      //   newImageUrl = `/official_web/images/coin/coin${20}.png`;
       // }
 
       let timer = null;
@@ -367,7 +367,7 @@ h1 {
 // .slide1 {
 //   z-index: 1;
 //   padding: 0 30px;
-//   background-image: url("~assets/images/home_01.png");
+//   background-image: url("~assets/official_web/images/home_01.png");
 //   -o-background-size: 100% auto;
 //   -webkit-background-size: 100% auto;
 //   -moz-background-size: 100% auto;
@@ -602,7 +602,7 @@ h1 {
 }
 
 .slide3 {
-  // background-image: url("~assets/images/sector3-bg.png");
+  // background-image: url("~assets/official_web/images/sector3-bg.png");
 
   .nav-wrap {
     bottom: -17%;

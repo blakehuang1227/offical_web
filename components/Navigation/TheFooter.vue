@@ -3,20 +3,20 @@
     <div class="width-wrap">
       <div class="block block1">
         <div>
-          <div>白吃貓股份有限公司</div>
-          <div>244 新北市林口區文化三路二段357號</div>
+          <div>XXX股份有限公司</div>
+          <div>244 gggggggggggggggassds</div>
           <div>客服中心： (1000 - 2100 週一到週六)</div>
-          <div>02-2602-6777</div>
-          <div>service@maobc.com.tw</div>
+          <div>02-XXXX-6777</div>
+          <div>service@XXX.com.tw</div>
           <div class="icon-wrap">
             <div>
-              <img src="/images/footer/facebook.png" />
+              <img src="/official_web/images/footer/facebook.png" />
             </div>
             <div>
-              <img src="/images/footer/instagram.png" />
+              <img src="/official_web/images/footer/instagram.png" />
             </div>
             <div>
-              <img src="/images/footer/youtube.png" />
+              <img src="/official_web/images/footer/youtube.png" />
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <div>常見問題｜使用手冊</div>
           <div>隱私權政策｜會員契約書｜代理收付服務條款</div>
         </div>
-        <div>©白吃貓股份有限公司 Maobc Co., Ltd.</div>
+        <div>©XXX股份有限公司 XXX Co., Ltd.</div>
       </div>
       <div class="block block3">
         <div></div>

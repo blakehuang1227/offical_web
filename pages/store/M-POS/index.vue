@@ -37,11 +37,11 @@
               <div class="text1">線上專屬店舖</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
 
             <div class="right-image">
-              <img src="/images/store/M-POS/m-pos.png" />
+              <img src="/official_web/images/store/M-POS/m-pos.png" />
             </div>
           </div>
         </div>
@@ -54,11 +54,11 @@
               <div class="text1">多人線上一同點餐</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
 
             <div class="right-image">
-              <img src="/images/store/M-POS/mobiles.png" />
+              <img src="/official_web/images/store/M-POS/mobiles.png" />
             </div>
           </div>
         </div>
@@ -73,10 +73,10 @@
               <div class="text1">輕鬆掌控店內大小事</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/M-POS/m-pos.png" />
+              <img src="/official_web/images/store/M-POS/m-pos.png" />
             </div>
           </div>
         </div>
@@ -89,11 +89,11 @@
               <div class="text1">輕鬆掌控店內大小事</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
 
             <div class="right-image">
-              <img src="/images/store/M-POS/m-pos.png" />
+              <img src="/official_web/images/store/M-POS/m-pos.png" />
             </div>
           </div>
         </div>
@@ -108,10 +108,10 @@
               <div class="text1">輕鬆掌控店內大小事</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
             <div class="right-image">
-              <img src="/images/store/M-POS/m-pos.png" />
+              <img src="/official_web/images/store/M-POS/m-pos.png" />
             </div>
           </div>
         </div>
@@ -124,11 +124,11 @@
               <div class="text1">輕鬆掌控店內大小事</div>
               <div
                 class="text2"
-              >我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，能blablabla文字串我們深信透過 maobc 平台，</div>
+              >我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，能blablabla文字串我們深信透過 abcdefg，</div>
             </div>
 
             <div class="right-image">
-              <img src="/images/store/M-POS/devices.png" />
+              <img src="/official_web/images/store/M-POS/devices.png" />
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ section {
 }
 
 .section1 {
-  background: url("/images/store/M-POS/section1-bg.png");
+  background: url("/official_web/images/store/M-POS/section1-bg.png");
   background-size: cover;
   position: relative;
 

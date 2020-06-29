@@ -27,7 +27,7 @@ export default {
 </script>
 
 
-<style  lang="scss">
+<style   lang="scss">
 @import "~/assets/font/font.css";
 $base-font-size: 16px !default;
 
@@ -49,6 +49,11 @@ $device-list: 320px 360px 400px 440px 480px 520px 560px 600px 640px;
 }
 * {
   touch-action: pan-y;
+}
+
+*:focus {
+  border: none;
+  outline: none;
 }
 
 .container {

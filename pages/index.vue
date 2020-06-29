@@ -14,12 +14,12 @@
       <div class="block">
         <div class="width-wrap">
           <div class="section1-imgs-wrap">
-            <img src="/images/home/section1-1.png" />
-            <img src="/images/home/section1-2.png" style="margin-top:44px" />
-            <img src="/images/home/section1-3.png" style="margin-top:24px" />
-            <img src="/images/home/section1-4.png" />
-            <img src="/images/home/section1-5.png" style="margin-top:44px" />
-            <img src="/images/home/section1-6.png" />
+            <img src="/official_web/images/home/section1-1.png" />
+            <img src="/official_web/images/home/section1-2.png" style="margin-top:44px" />
+            <img src="/official_web/images/home/section1-3.png" style="margin-top:24px" />
+            <img src="/official_web/images/home/section1-4.png" />
+            <img src="/official_web/images/home/section1-5.png" style="margin-top:44px" />
+            <img src="/official_web/images/home/section1-6.png" />
           </div>
         </div>
         <div class="width-wrap">
@@ -60,25 +60,25 @@
             </div>
             <div class="coin-box">
               <div :class="coinStyles" id="coin1">
-                <img style="width:160px" src="/images/home/coin-b.png" />
+                <img style="width:160px" src="/official_web/images/home/coin-b.png" />
               </div>
               <div :class="coinStyles" id="coin2">
-                <img style="width:80px" src="/images/home/coin-m.png" />
+                <img style="width:80px" src="/official_web/images/home/coin-m.png" />
               </div>
               <div :class="coinStyles" id="coin3">
-                <img style="width:80px" src="/images/home/coin-s.png" />
+                <img style="width:80px" src="/official_web/images/home/coin-s.png" />
               </div>
               <div :class="coinStyles" id="coin4">
-                <img style="width:40px" src="/images/home/coin-s.png" />
+                <img style="width:40px" src="/official_web/images/home/coin-s.png" />
               </div>
               <div :class="coinStyles" id="coin5">
-                <img style="width:40px" src="/images/home/coin-s.png" />
+                <img style="width:40px" src="/official_web/images/home/coin-s.png" />
               </div>
               <div :class="coinStyles" id="coin6">
-                <img style="width:140px" src="/images/home/coin-b.png" />
+                <img style="width:140px" src="/official_web/images/home/coin-b.png" />
               </div>
               <div :class="coinStyles" id="coin7">
-                <img style="width:140px" src="/images/home/coin-b.png" />
+                <img style="width:140px" src="/official_web/images/home/coin-b.png" />
               </div>
             </div>
           </div>
@@ -97,31 +97,31 @@
               <div>
                 <img
                   style="max-height:100px;max-width:100px"
-                  src="/images/home/categories-icon-sample.png"
+                  src="/official_web/images/home/categories-icon-sample.png"
                 />
               </div>
               <div>
                 <img
                   style="max-height:100px;max-width:100px"
-                  src="/images/home/categories-icon-sample.png"
+                  src="/official_web/images/home/categories-icon-sample.png"
                 />
               </div>
               <div>
                 <img
                   style="max-height:100px;max-width:100px"
-                  src="/images/home/categories-icon-sample.png"
+                  src="/official_web/images/home/categories-icon-sample.png"
                 />
               </div>
               <div>
                 <img
                   style="max-height:100px;max-width:100px"
-                  src="/images/home/categories-icon-sample.png"
+                  src="/official_web/images/home/categories-icon-sample.png"
                 />
               </div>
               <div>
                 <img
                   style="max-height:100px;max-width:100px"
-                  src="/images/home/categories-icon-sample.png"
+                  src="/official_web/images/home/categories-icon-sample.png"
                 />
               </div>
             </slick>
@@ -143,13 +143,13 @@
     <section class="section4">
       <div class="block">
         <div>
-          <img src="/images/home/section4-icon.png" />
+          <img src="/official_web/images/home/section4-icon.png" />
         </div>
-        <div class="text1">立刻下載 Maobc Pay</div>
+        <div class="text1">立刻下載 XXXX Pay</div>
         <div class="text2">享受超值的吃喝玩樂體驗</div>
         <div class="app-download">
-          <img src="/images/home/apple-store.png" />
-          <img src="/images/home/google-store.png" />
+          <img src="/official_web/images/home/apple-store.png" />
+          <img src="/official_web/images/home/google-store.png" />
         </div>
       </div>
     </section>
@@ -637,7 +637,7 @@ body {
 
 .section3 {
   padding: 0 50px;
-  background: url("/images/home/section3-bg.png");
+  background: url("/official_web/images/home/section3-bg.png");
   .block {
   }
   .section3-wrap {
