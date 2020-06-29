@@ -1,6 +1,6 @@
-# front-maobc
+# 
 
-> My terrific Nuxt.js project
+> Nuxt.js project
 
 ## Build Setup
 
